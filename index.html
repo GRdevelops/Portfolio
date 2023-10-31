@@ -8,40 +8,71 @@
 		<link rel="stylesheet" href="./css/styles.css" />
 		<script defer src="./js/scripts.js"></script>
 	</head>
-	<body>
+	<body  style="background-color: #bbb;" ><!-- See also container class -->
 		<header>
-			<nav class="container">
+			<nav class="container" style="border-top-right-radius: 1rem; border-top-left-radius: 1rem;  margin-top: 2rem;">
 				<a><button class="btn text-lg bg-dark color-white" style="float: right">Menu</button></a>
 			</nav>
 		</header>
 
 		<main>
+			<!-- Hero -->
 			<section id="hero" class="container padding-vertical-top">
 				<div>
 					<h1 class="text-8xl color-800 font-weight-700">Giovanni Ruggieri</h1>
-					<h1 class="text-8xl color-800 font-weight-700 spacer-3rem">Web Developer</h1>
+					<h1 class="text-8xl color-800 font-weight-700 spacer-1rem">Web Developer</h1>
 				</div>
 
-				<div class="spacer-2rem" style="display: flex; justify-content: space-between;">
+				<div class="padding-3" style="display: flex; justify-content: space-between;">
 					<div>
 						<span class="text-xl">// Welcome</span>
 						<span class="text-2xl">🖐️</span>
 					</div>
 
-					<a href=""><button class="btn-2">Scroll Down</button></a>
+					<a href=""><button class="btn-2 text-xl">Scroll Down</button></a>
 				</div>
 
         <div style="background-color: #ddd; height: 500px; border-radius: 2rem;">
         </div>
 			</section>
 
+			<!-- About Me -->
       <section id="about-me" class="container">
-        <div style="display: flex; column-gap: 2rem;">
-					<p class="text-6xl font-weight-600 color-800" style="max-width: 27ch;">As a web developer, I focus on turning beautiful interfaces into functional products through up-to-date technologies and clean code solutions.</p>
+        <div class="padding-3 border-b" style="display: flex; column-gap: 4rem;">
+					<p class="text-6xl font-weight-600 color-900" style="max-width: 27ch; line-height: 1.1;">As a web developer, I focus on turning beautiful interfaces into functional products through up-to-date technologies and clean code solutions.</p>
 					<div class="dotted-border"></div>
-					<span>{ About me }</span>
+					<span class="text-2xl color-900 font-weight-600">{ About me }</span>
         </div>
       </section>
+
+			<!-- My Skills -->
+			<section id="my-skills" class="container">
+        <div class="padding-3 border-b" style="display: grid; grid-template-columns: .7fr 3fr; column-gap: 4rem;">
+
+					<span class="text-2xl color-900 font-weight-600">{ My skills }</span>
+
+					<div class="color-900" style="display: flex; grid-template-columns: 1fr 1fr 1fr; column-gap: 4rem;">
+						<div class="dotted-border"></div>
+
+						<ul class="text-3xl" style="display: flex; 	flex-direction: column; row-gap: 3rem;">
+							<li>Webflow</li>
+							<li>Figma</li>
+							<li>HTML</li>
+							<li>CSS <span class="text-xl">- Bootstrap /TailwindCSS 	frameworks</span></li>
+							<li>JavaScript <span class="text-xl">- React 	library<span></li>
+						</ul>
+
+						<div style="display: flex; flex-grow: 1; align-self: stretch;">
+							<div id="square"></div>
+						</div>
+					</div>
+        </div>
+      </section>
+
+			<!-- Work -->
+			<section id="work" class="container">
+				<h2 class="text-9xl color-800 font-weight-600 padding-3 " style="text-wrap: nowrap;">Work Work Work Work Work Work Work</h2>
+			</section>
 
 		</main>
 
