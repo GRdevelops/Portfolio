@@ -29,7 +29,13 @@
 						<span class="text-2xl">🖐️</span>
 					</div>
 
-					<a href=""><button class="btn-2 text-xl">Scroll Down</button></a>
+					<a href="" class="btn-arrowed text-xl color-900">
+						<div class="arrow-wrapper">
+							<img class="arrow-2 primary" src="./images/arrow-icon-1.svg" alt=""/>
+							<img class="arrow-2 secondary" src="./images/arrow-icon-1.svg" alt=""/>
+						</div>
+						Scroll Down
+					</a>
 				</div>
 
         <div style="background-color: #ddd; height: 500px; border-radius: 2rem;">
@@ -51,14 +57,14 @@
 
 					<span class="text-2xl color-900 font-weight-600">{ My skills }</span>
 
-					<div class="color-900" style="display: flex; grid-template-columns: 1fr 1fr 1fr; column-gap: 4rem;">
+					<div class="color-900" style="display: flex; column-gap: 4rem;">
 						<div class="dotted-border"></div>
 
 						<ul class="text-3xl" style="display: flex; 	flex-direction: column; row-gap: 3rem;">
 							<li>Webflow</li>
 							<li>Figma</li>
 							<li>HTML</li>
-							<li>CSS <span class="text-xl">- Bootstrap /TailwindCSS 	frameworks</span></li>
+							<li>CSS <span class="text-xl">- Bootstrap / TailwindCSS 	frameworks</span></li>
 							<li>JavaScript <span class="text-xl">- React 	library<span></li>
 						</ul>
 
@@ -71,30 +77,63 @@
 
 			<!-- Work -->
 			<section id="work" class="container">
-				<h2 class="text-9xl color-800 font-weight-600 padding-3 " style="text-wrap: nowrap;">Work Work Work Work Work Work Work</h2>
+				<h2 class="text-9xl color-800 font-weight-700 padding-3 " style="text-wrap: nowrap;">Work Work Work Work Work Work Work</h2>
 
-				<div class="case-study">
+				<template id="case-study">
 					<div class="image-wrapper">
-						<img src="./images/1.webp" alt="">
+						<img id="content-image" src="" alt="">
 					</div>
 
-					<div style="display: flex;">
+					<div class="padding-2" style="display: flex; justify-content: space-between;">
 						<div>
-							<h3>PrimoPiano Luxury Accomodations</h3>
-							<span>- B&B in Vieste, Italy</span>
+							<h3 id="content-title" class="text-6xl color-900 font-weight-600 spacer-1rem"></h3>
+							<span id="content-subtitle"></span>
 						</div>
 						<div>
-							<p>A cutting-edge digital platform designed to revolutionize the way people interact with technology. Back in the beginning of the year, I downloaded a template from envato market.</p>
+							<p id="content-description" class="padding-1" style="margin-bottom: .5rem;"></p>
+							<div style="display: flex; justify-content: space-between; align-items: center; column-gap: 2rem;">
+								<div class="skills">
+									<span id="first-skill" class="skill bg-red" style="display: inline-block;"></span>
+									<span id="second-skill" class="skill bg-green" style="display: inline-block;"></span>
+								</div>
+								<div class="buttons">
+									<button>See on Github</button>
+									<button>Visit Site</button>
+								</div>
+							</div>
 						</div>
-						
-
 					</div>
+					<div class="dotted-line spacer-3rem"></div>
+				</template>
 
-				</div>
 			</section>
+
+			<section id="" class="container">
+        <h2 class="text-9xl color-800 font-weight-700 spacer-3rem" style="text-wrap: nowrap;">More coming More coming More coming</h2>
+				<div class="spacer-3rem" style="display: flex; gap: 1rem; float: right;">
+					<span class="spacer-3rem">Always in expansion</span>
+					<div class="dotted-border" style="margin: 0;"></div>
+				</div>
+      </section>
 
 		</main>
 
-		<footer></footer>
+		<footer class="bg-dark color-white text-center container">
+			<div>
+				<span>if ( wannaWorkWithMe === true ) {</span>
+				<div class="text-9xl font-weight-600">Let’s talk</div>
+				<button>Get in Touch</button>
+			</div>
+			<div>
+				<span class="menu-title">{ Navigation }</span>
+				<ul>
+					<li>Home</li>
+					<li>About</li>
+					<li>Work</li>
+					<li>Contact</li>
+				</ul>
+			</div>
+			<span>© Made by <a href="">Giovanni Ruggieri</a> - Powered by a text editor (<a href="">VSCode</a>)</span>
+		</footer>
 	</body>
 </html>
