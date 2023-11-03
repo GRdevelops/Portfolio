@@ -35,6 +35,10 @@ p {
 	font-size: 1rem; /* 16px - default/base size */
 }
 
+.text-medium {
+	font-size: 1.125rem; /* 18px */
+}
+
 .text-lg {
 	font-size: 1.25rem; /* 20px */
 }
@@ -69,6 +73,10 @@ p {
 
 .text-9xl {
 	font-size: 8.5rem; /* 136px */
+}
+
+.font-weight-500 {
+	font-weight: 500;
 }
 
 .font-weight-600 {
@@ -129,13 +137,20 @@ p {
 	white-space: nowrap;
 }
 
+.overflow-hidden {
+	overflow: hidden;
+}
+
 .br {
 	border: 1px solid red !important;
 }
 
-
 .bg-dark {
 	background-color: #222;
+}
+
+.bg-white {
+	background-color: white;
 }
 
 .spacer-1rem {
@@ -190,21 +205,20 @@ p {
 	padding-bottom: 4rem;
 }
 
-.border-b {
-	opacity: 0.9;
-	border-bottom: 2px solid black;
-}
+/* Button 1 */
 
 .btn {
 	font-family: 'Inter', Arial, Helvetica, sans-serif;
 	border: 1px solid transparent;
-	padding: 1rem 1.5rem;
+	padding: 1.3rem 1.5rem;
 	border-radius: 3rem;
 	cursor: pointer;
 	transition: all 150ms ease-in-out;
 }
 
-.btn-arrowed {
+/* Button 2 */
+
+.btn-2 {
 	font-family: 'Inter', Arial, Helvetica, sans-serif;
 	border: none;
 	background-color: transparent;
@@ -215,6 +229,7 @@ p {
 }
 
 .arrow-wrapper {
+	opacity: 0.8;
 	width: 35px;
 	height: 35px;
 	display: flex;
@@ -232,17 +247,19 @@ p {
 	transform: translate(-100%, -200%) rotate(-135deg);
 }
 
-.btn-arrowed:hover .arrow-2.primary {
+.btn-2:hover .arrow-2.primary {
 	animation: go-down-right 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
 }
 
-.btn-arrowed:hover .arrow-2.secondary {
+.btn-2:hover .arrow-2.secondary {
 	animation: go-down-right-2 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms forwards;
 }
 
 @keyframes go-down-right {
 	from {
+
 	}
+
 	to {
 		transform: translate(100%, 100%) rotate(-135deg);
 	}
@@ -250,10 +267,111 @@ p {
 
 @keyframes go-down-right-2 {
 	from {
+
 	}
+
 	to {
 		transform: translate(0%, -100%) rotate(-135deg);
 	}
+}
+
+/* Button 3 */
+
+.btn-3 {
+	column-gap: .2rem;
+}
+
+.btn-3 .arrow-2 {
+	transform: rotate(135deg);
+}
+
+.btn-3 .arrow-2.secondary {
+	transform: translate(-100%, 0%) rotate(135deg);
+}
+
+.btn-3:hover .arrow-2.primary {
+	animation: go-up-right 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+.btn-3:hover .arrow-2.secondary {
+	animation: go-up-right-2 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms forwards;
+}
+
+@keyframes go-up-right {
+	from {
+	}
+	to {
+		transform: translate(100%, -100%) rotate(135deg);
+	}
+}
+
+@keyframes go-up-right-2 {
+	from {
+	}
+	to {
+		transform: translate(0%, -100%) rotate(135deg);
+	}
+}
+
+/* Button-4 */
+
+.btn-4 {
+	text-decoration: none;
+	overflow: hidden;
+}
+
+.underlines {
+	margin-top: .4rem;
+}
+
+.default-underline {
+	height: 2px;
+	background-color: black;
+	opacity: 0.2;
+	border-radius: 1rem;
+}
+
+.color-white .default-underline {
+	background-color: white;
+}
+
+.moving-underline {
+	height: 2px;
+	background-color: black;
+	opacity: 0.5;
+	border-radius: 1rem;
+	transform: translate(-105%, -100%);
+	transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.color-white .moving-underline {
+	background-color: white;
+}
+
+.btn-4:hover .moving-underline {
+	transform: translate(0%, -100%);
+}
+
+.line {
+	height: 2px;
+	background-color: black;
+	opacity: 0.7;
+	transform: translateX(-105%);
+	will-change: transform;
+}
+
+.line.animate {
+	animation: revealOnScroll 2s ease forwards;
+}
+
+@keyframes revealOnScroll {
+  from {
+
+  }
+  
+  to {
+    transform: translate(0%);
+  }
 }
 
 /* Header */
@@ -285,27 +403,15 @@ nav {
 
 /* About me */
 
-.dotted-border {
-	opacity: 0.9;
-	align-self: stretch;
-	width: 1px;
-	background: radial-gradient(circle, black 35%, transparent 30%);
-	background-size: 1px 15px;
-	background-repeat: repeat-y;
-	position: relative;
-	margin-top: 8px;
-	margin-bottom: 18px;
+.v-l-wrapper {
+	overflow: hidden;
 }
 
-.dotted-border::after {
-	content: '';
-	position: absolute;
-	bottom: -8px;
-	left: -4px;
-	width: 10px;
-	height: 10px;
-	background-color: black;
-	border-radius: 50%;
+.line.vertical {
+	width: 2px;
+	height: 100%;
+	transform: translateY(-105%);
+	will-change: transform;
 }
 
 /* My skills */
@@ -318,6 +424,7 @@ nav {
 	position: relative;
 	bottom: 0;
 	align-self: flex-end;
+	will-change: bottom;
 }
 
 .jump {
@@ -344,6 +451,16 @@ nav {
 }
 
 /* Work */
+
+.repeated-heading {
+	font-size: 8.5rem;
+	font-weight: 600;
+	padding: 3rem 0;
+	opacity: 0.9;
+  white-space: nowrap; 
+  transform: translateX(-50%); 
+}
+
 
 .dotted-line {
 	width: 100%;
@@ -394,7 +511,7 @@ nav {
 }
 
 .skill {
-	margin-right: 0.5rem;
+	margin-right: .5rem;
 	padding: 0.6rem 1.2rem;
 	border-radius: 2rem;
 }
@@ -402,37 +519,34 @@ nav {
 .buttons {
 	display: inline-flex;
 	flex-wrap: nowrap;
-	align-items: last baseline;
+	align-items: baseline;
 	column-gap: 1rem;
 }
 
-.btn-4 {
-	text-decoration: none;
-	overflow: hidden;
+.dotted-border {
+	opacity: 0.9;
+	align-self: stretch;
+	width: 1px;
+	background: radial-gradient(circle, black 35%, transparent 30%);
+	background-size: 1px 15px;
+	background-repeat: repeat-y;
+	position: relative;
+	margin-top: 8px;
+	margin-bottom: 18px;
 }
 
-
-.underlines {
-	margin-top: .4rem;
-}
-
-.default-underline {
-	height: 2px;
+.dotted-border::after {
+	content: '';
+	position: absolute;
+	bottom: -8px;
+	left: -4px;
+	width: 10px;
+	height: 10px;
 	background-color: black;
-	opacity: 0.2;
+	border-radius: 50%;
 }
 
-.moving-underline {
-	height: 2px;
-	background-color: black;
-	opacity: 0.5;
-	transform: translate(-100%, -100%);
-	transition: all 300ms ease;
-}
 
-.btn-4:hover .moving-underline {
-	transform: translate(0%, -100%);
-}
 
 /* Footer */
 
@@ -445,6 +559,19 @@ footer {
 
 footer a {
 	color: inherit;
+}
+
+footer a:hover {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.1), 0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+
+footer .btn {
+	transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+footer .btn:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255,0.1);
 }
 
 .menu-title {

@@ -12,7 +12,7 @@
 		<div class="page-wrapper">
 			<header>
 				<nav class="container">
-					<a><button class="btn text-lg bg-dark color-white" 	style="float: right">Menu</button></a>
+					<a class="btn text-lg bg-dark color-white inline" 	style="float: right">Menu</a>
 				</nav>
 			</header>
 
@@ -30,7 +30,7 @@
 							<span id="emoji" class="inline text-2xl">🖐🏻</span>
 						</div>
 
-						<a href="" class="btn-arrowed text-xl color-900">
+						<a href="" class="btn-2 text-xl color-900">
 							<div class="arrow-wrapper">
 								<img class="arrow-2 primary" src="./images/	arrow-icon-1.svg" alt=""/>
 								<img class="arrow-2 secondary" src="./images/	arrow-icon-1.svg" alt=""/>
@@ -45,21 +45,27 @@
 
 				<!-- About Me -->
     	  <section id="about-me" class="container">
-    	    <div class="padding-3 border-b" style="display: flex; 	column-gap: 4rem;">
+    	    <div class="padding-3" style="display: flex; column-gap: 4rem;">
 						<p class="text-6xl font-weight-600 color-900" 	style="max-width: 27ch; line-height: 1.1;">As a web 	developer, I focus on turning beautiful interfaces into 	functional products through up-to-date technologies and 	clean code solutions.</p>
-						<div class="dotted-border"></div>
+						<div class="v-l-wrapper">
+							<div class="line vertical"></div>
+						</div>
 						<span class="text-2xl color-900 font-weight-600">{ About 	me }</span>
     	    </div>
+					<div class="overflow-hidden"><div class="line"></div></div>
     	  </section>
+
 
 				<!-- My Skills -->
 				<section id="my-skills" class="container">
-    	    <div class="padding-3 border-b" style="display: grid; 	grid-template-columns: .9fr 3fr; column-gap: 4rem;">
+    	    <div class="padding-3" style="display: grid; 	grid-template-columns: .9fr 3fr; column-gap: 4rem; align-items: start;">
 
 						<span class="text-2xl color-900 font-weight-600">{ My 	skills }</span>
 
 						<div class="color-900" style="display: flex; column-gap: 	4rem;">
-							<div class="dotted-border"></div>
+							<div class="v-l-wrapper">
+								<div class="line vertical"></div>
+							</div>
 
 							<ul class="text-2xl" style="display: flex; 		flex-direction: column; row-gap: 3rem;">
 								<li>Webflow</li>
@@ -74,11 +80,12 @@
 							</div>
 						</div>
     	    </div>
+					<div class="overflow-hidden"><div class="line"></div></div>
     	  </section>
 
 				<!-- Work -->
 				<section id="work" class="container">
-					<h2 class="text-9xl color-800 font-weight-700 padding-3 " 	style="text-wrap: nowrap;">Work Work Work Work Work Work 	Work</h2>
+					<h2 class="repeated-heading">Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work</h2>
 
 					<template id="case-study">
 						<div class="image-wrapper">
@@ -99,19 +106,19 @@
 									</div>
 
 									<div class="buttons">
-										<a href="" class="btn-4 text-base color-900 text-nowrap">
+										<a href="" class="btn-4 text-medium color-900 text-nowrap">
 											See on Github
 											<div class="underlines">
 												<div class="default-underline"></div>
 												<div class="moving-underline"></div>
 											</div>
 										</a>
-										<a href="" class="inline btn-arrowed text-lg color-900 text-nowrap">
+										<a href="" class="btn-3 inline btn-2 text-medium color-800 text-nowrap">
+											Visit Site
 											<div class="arrow-wrapper">
 												<img class="arrow-2 primary" src="./images/	arrow-icon-1.svg" alt=""/>
 												<img class="arrow-2 secondary" src="./images/	arrow-icon-1.svg" alt=""/>
 											</div>
-											Visit Site
 										</a>
 									</div>
 									
@@ -124,8 +131,8 @@
 				</section>
 
 				<section id="" class="container">
-    	    <h2 class="text-9xl color-800 font-weight-700 spacer-3rem" 	style="text-wrap: nowrap;">More coming More coming More 	coming</h2>
-					<div class="spacer-3rem" style="display: flex; gap: 1rem; 	float: right;">
+    	    <h2 class="repeated-heading" style="margin-top: -4rem;">More coming More coming More coming More coming More coming More coming More coming</h2>
+					<div class="spacer-3rem" style="display: flex; gap: 1rem; 	float: right; height: 50px;">
 						<span class="spacer-3rem">Always in expansion</span>
 						<div class="dotted-border" style="margin: 0;"></div>
 					</div>
@@ -136,16 +143,40 @@
 			<footer class="bg-dark color-white text-center container" style="display: flex; flex-direction: column; row-gap: 8rem;">
 				<div>
 					<span class="inline text-lg spacer-2rem">if ( 	wannaWorkWithMe === true ) {</span>
-					<div class="text-7xl font-weight-600 spacer-2rem">Let’s 	talk</div>
-					<button>Get in Touch</button>
+					<div class="text-8xl font-weight-600 spacer-2rem">Let’s 	talk</div>
+					<a class="btn text-lg bg-white color-900 font-weight-600 inline">Get in Touch</a>
 				</div>
-				<div>
-					<ul style="display: flex; flex-direction: column; row-gap: 2rem;">
-						<li class="menu-title">{ Navigation }</li>
-						<li>Home</li>
-						<li>About</li>
-						<li>Work</li>
-						<li>Contact</li>
+				<div class="footer-column">
+					<span class="menu-title spacer-3rem inline">{ Navigation }</span>
+					<ul style="display: flex; flex-direction: column; gap: 1.5rem;">
+						<li><a href="" class="btn-4 text-base color-900 text-nowrap inline color-white">
+							Home
+							<div class="underlines">
+								<div class="default-underline"></div>
+								<div class="moving-underline"></div>
+							</div>
+						</a></li>
+						<li><a href="" class="btn-4 text-base color-900 text-nowrap inline color-white">
+							About
+							<div class="underlines">
+								<div class="default-underline"></div>
+								<div class="moving-underline"></div>
+							</div>
+						</a></li>
+						<li><a href="" class="btn-4 text-base color-900 text-nowrap inline color-white">
+							Work
+							<div class="underlines">
+								<div class="default-underline"></div>
+								<div class="moving-underline"></div>
+							</div>
+						</a></li>
+						<li><a href="" class="btn-4 text-base color-900 text-nowrap inline color-white">
+							Contact
+							<div class="underlines">
+								<div class="default-underline"></div>
+								<div class="moving-underline"></div>
+							</div>
+						</a></li>
 					</ul>
 				</div>
 				<span>© Made by <a href="">Giovanni Ruggieri</a> - Powered by 	a text editor (<a href="">VSCode</a>)</span>
