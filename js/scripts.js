@@ -1,3 +1,12 @@
+window.onload = () => {
+  // Check if there's a hash in the URL
+  if (window.location.hash) {
+    history.replaceState("", document.title, window.location.pathname + window.location.search);
+  }
+}
+
+
+
 const square = document.getElementById('square');
 
 const animate = () => { square.classList.add('jump');
@@ -14,9 +23,6 @@ square.addEventListener('animationend', handleAnimationEnd);
 
 // Start the initial animation
 animate();
-
-
-
 
 
 
@@ -71,7 +77,7 @@ document.addEventListener("DOMContentLoaded", loadWork);
 //Animate lines on scroll
 
 const triggerAnimation = () => {
-  const elements = document.querySelectorAll('.line');
+  const elements = document.querySelectorAll('.line, .wave-letters');
   const windowHeight = window.innerHeight;
   
   elements.forEach(element => {
@@ -87,16 +93,16 @@ window.addEventListener('scroll', triggerAnimation);
 
 
 
-const headings = document.querySelectorAll('.repeated-heading');
+// Parallax effect
+
+const headings = document.querySelectorAll('.parallax-heading');
 
 const setTranslateX = () => {
   const scrollValue = window.scrollY;
   const maxScrollValue = document.body.scrollHeight - window.innerHeight;
 
-  // Convert vertical scroll to a horizontal percentage
   const scrollPercentage = scrollValue / maxScrollValue;
 
-  // Assuming your content is 100% wider than the viewport
   const maxTranslateX = window.innerWidth;
   
   headings.forEach(heading => {
@@ -111,3 +117,122 @@ window.addEventListener('scroll', () => {
 
 
 
+// Navmenu animation OPEN
+
+const menuButton = document.getElementById('menu-button');
+const closeButton = document.getElementById('close-menu');
+const layers = document.querySelectorAll('.layer');
+const options = document.querySelectorAll('.option');
+const navMenu = document.querySelector('.nav-menu');
+const menuList = document.querySelector('.menu-list');
+
+const openMenu = () => {
+  navMenu.style.display = 'flex'; // Show the nav menu
+
+  // Animate layers with Web Animations API
+  layers.forEach((layer, index) => {
+    layer.animate([
+      { height: '0' },
+      { height: '100dvh' } // Assuming full height is desired
+    ], {
+      duration: 700,
+      fill: 'forwards',
+      delay: index * 100,
+      easing: 'ease'
+    });
+  });
+
+  // Animate options with Web Animations API
+  options.forEach((option, index) => {
+    menuList.style.display = '';
+    option.animate([
+      { opacity: 0 },
+      { opacity: 1 }
+    ], {
+      duration: 1000,
+      fill: 'forwards',
+      delay: index * 100 + 500,
+      easing: 'ease'
+    });
+  });
+
+  // Show and animate close button
+  setTimeout(() => {
+    closeButton.style.display = 'flex';
+    closeButton.animate([
+      { transform: 'scale(0)' },
+      { transform: 'scale(1) rotate(270deg)' }
+    ], {
+      duration: 500,
+      fill: 'forwards',
+      easing: 'ease'
+    });
+  }, 500);
+}
+
+const closeMenu = () => {
+  let animationsCompleted = 0;
+
+  // Reverse the animations for options
+  options.forEach((option, index) => {
+    const animation = option.animate([
+      { opacity: 1 },
+      { opacity: 0 }
+    ], {
+      duration: 150,
+      fill: 'forwards',
+      delay: (options.length - index - 1) * 50,
+      easing: 'ease'
+    });
+
+    animation.onfinish = () => {
+      animationsCompleted++;
+      if (animationsCompleted === options.length) {
+        menuList.style.display = 'none';
+      }
+    };
+  });
+
+  // Reverse the animations for layers
+  layers.forEach((layer, index) => {
+    layer.animate([
+      { height: '100vh' },
+      { height: '0' }
+    ], {
+      duration: 700,
+      fill: 'forwards',
+      delay: (layers.length - index - 1) * 100,
+      easing: 'ease'
+    });
+  });
+    
+
+  // Hide and animate close button
+  closeButton.animate([
+    { transform: 'scale(1) rotate(270deg)' },
+    { transform: 'scale(0)' }
+  ], {
+    duration: 500,
+    fill: 'forwards',
+    easing: 'ease'
+  }).onfinish = () => {
+    closeButton.style.display = 'none';
+  };
+};
+
+// Start closeMenu animation when clicking on menu options
+options.forEach(option => {
+  option.querySelector('a').addEventListener('click', (event) => {
+    closeMenu();
+  });
+});
+
+menuButton.addEventListener('click', openMenu);
+closeButton.addEventListener('click', closeMenu);
+
+
+const wordsToWave = document.querySelectorAll('wave-letters');
+
+const waveLetters = () => {
+
+}
