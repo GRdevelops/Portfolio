@@ -18,7 +18,10 @@
 					<div class="layer three"></div>
 					<div class="layer four"></div>
 				</div>
-				<a id="close-menu" class="btn bg-white" style="float: right"><div class="bar one"></div><div class="bar two"></div></a>
+				<a id="close-menu" class="bg-white" style="float: right">
+					<div class="bar one"></div>
+					<div class="bar two"></div>
+				</a>
 				<ul class="menu-list">
 					<li class="option one">
 						<a href="#">
@@ -61,25 +64,34 @@
 		
 			<header>
 				<nav class="container">
-					<a id="menu-button" class="btn text-lg color-white font-weight-600 bg-dark inline" style="float: right">Menu</a>
+					<a class="menu-button desktop btn text-lg color-white font-weight-600 bg-dark inline" style="float: right">
+							Menu
+					</a>
+					<a class="menu-button mobile bg-dark inline" style="float: right">
+						<div class="wrapper">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+					</a>
 				</nav>
 			</header>
 
 			<main>
 				<!-- Hero -->
-				<section id="hero" class="container padding-vertical-top">
+				<section id="hero" class="container">
 					<div>
-						<h1 class="text-8xl color-800 font-weight-700">Giovanni 	Ruggieri</h1>
-						<h1 class="text-8xl color-800 font-weight-700 	spacer-1rem">Web Developer</h1>
+						<h1 class="text-8xl color-800 font-weight-600">Giovanni 	Ruggieri</h1>
+						<h1 class="text-8xl color-800 font-weight-600">Web Developer</h1>
 					</div>
 
-					<div class="padding-3" style="display: flex; 	justify-content: space-between;">
+					<div class="padding-2" style="display: flex; 	justify-content: space-between; align-items: center;">
 						<div>
-							<span class="text-xl font-weight-600">// Welcome</span>
-							<span id="emoji" class="inline text-2xl">🖐🏻</span>
+							<span class="text-xl font-weight-500">{ Welcome }</span>
+							<span id="emoji" class="inline text-2xl">👋🏻</span>
 						</div>
 
-						<a href="" class="btn-2 text-xl color-900 font-weight-600">
+						<a href="" class="btn-2 text-xl color-900 font-weight-500">
 							<div class="arrow-wrapper">
 								<img class="arrow-2 primary" src="./images/	arrow-icon-1.svg" alt=""/>
 								<img class="arrow-2 secondary" src="./images/	arrow-icon-1.svg" alt=""/>
@@ -88,18 +100,18 @@
 						</a>
 					</div>
 
-    	    <div style="background-color: #ddd; height: 500px; 	border-radius: 2rem;">
+    	    <div style="background-color: #ddd; height: 60dvw; max-height: 600px; border-radius: 2rem;">
     	    </div>
 				</section>
 
 				<!-- About Me -->
     	  <section id="about-me" class="container">
-    	    <div class="padding-3" style="display: flex; column-gap: 4rem;">
-						<p class="text-6xl font-weight-600 color-900" 	style="max-width: 27ch; line-height: 1.1;">As a web 	developer, I focus on turning beautiful interfaces into 	functional products through up-to-date technologies and 	clean code solutions.</p>
+    	    <div class="first-row padding-3">
+						<p class="font-weight-600 color-900">As a web 	developer, I focus on turning beautiful interfaces into 	functional products through up-to-date technologies and 	clean code solutions.</p>
 						<div class="v-l-wrapper">
 							<div class="line vertical"></div>
 						</div>
-						<span class="text-2xl color-900 font-weight-600">{ About 	me }</span>
+						<span class="text-xl color-900 font-weight-600 text-nowrap">{ About 	me }</span>
     	    </div>
 					<div class="overflow-hidden"><div class="line"></div></div>
     	  </section>
@@ -107,24 +119,24 @@
 
 				<!-- My Skills -->
 				<section id="my-skills" class="container">
-    	    <div class="padding-3" style="display: grid; 	grid-template-columns: .9fr 3fr; column-gap: 4rem; align-items: start;">
+    	    <div class="second-row padding-3">
 
-						<span class="text-2xl color-900 font-weight-600">{ My 	skills }</span>
+						<span class="text-xl color-900 font-weight-600">{ My 	skills }</span>
 
-						<div class="color-900" style="display: flex; column-gap: 	4rem;">
+						<div class="content color-900">
 							<div class="v-l-wrapper">
 								<div class="line vertical"></div>
 							</div>
 
-							<ul class="text-2xl font-weight-500" style="display: flex; 		flex-direction: column; row-gap: 3rem;">
-								<li>Webflow</li>
-								<li>Figma</li>
+							<ul class="text-2xl font-weight-600">
+								<li>JavaScript&nbsp;<span class="text-lg font-weight-base">-&nbsp;React library<span></li>
+								<li>CSS&nbsp;<span class="text-lg font-weight-base">-&nbsp;Vanilla&nbsp;/&nbsp;TailwindCSS</span></li>
 								<li>HTML</li>
-								<li>CSS <span class="text-lg font-weight-base">- Bootstrap / 	TailwindCSS 	frameworks</span></li>
-								<li>JavaScript <span class="text-lg font-weight-base">- React 		library<span></li>
+								<li>Figma</li>
+								<li>Webflow</li>
 							</ul>
 
-							<div style="display: flex; flex-grow: 1; align-self: 	stretch;">
+							<div class="square-container">
 								<div id="square"></div>
 							</div>
 						</div>
@@ -134,20 +146,20 @@
 
 				<!-- Work -->
 				<section id="work" class="container">
-					<h2 class="parallax-heading">Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work</h2>
+					<h2 class="parallax-heading text-9xl padding-2" data-speed="0.5">Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work</h2>
 
 					<template id="case-study">
 						<div class="image-wrapper">
-							<img id="content-image" src="" alt="">
+							<img class="content-image" src="" alt="">
 						</div>
 
-						<div class="padding-2" style="display: flex; 	justify-content: space-between;">
+						<div class="content-wrapper padding-2">
 							<div>
-								<h3 id="content-title" class="text-6xl color-900 	font-weight-600 spacer-1rem"></h3>
-								<span id="content-subtitle"></span>
+								<h3 class="content-title text-6xl color-900 	font-weight-600 spacer-1rem"></h3>
+								<span class="content-subtitle"></span>
 							</div>
 							<div>
-								<p id="content-description" class="padding-1" 	style="margin-bottom: .5rem;"></p>
+								<p class="content-description padding-1" 	style="margin-bottom: .5rem;"></p>
 								<div style="display: flex; justify-content: 	space-between; align-items: center; column-gap: 2rem;">
 									<div class="skills inline-flex nowrap">
 										<span id="first-skill" class="skill bg-green inline"></span>
@@ -174,25 +186,25 @@
 								</div>
 							</div>
 						</div>
-						<div class="dotted-line spacer-3rem"></div>
+						<div class="dotted-line"></div>
 					</template>
 
 				</section>
 
 				<section id="" class="container">
-    	    <h2 class="parallax-heading" style="margin-top: -4rem;">More coming More coming More coming More coming More coming More coming More coming</h2>
-					<div class="spacer-3rem" style="display: flex; gap: 1rem; 	float: right; height: 50px;">
-						<span class="spacer-3rem">Always in expansion</span>
+    	    <h2 class="parallax-heading text-9xl padding-2">Problem Solution Problem Solution Problem Solution Problem Solution Problem Solution Problem Solution Problem Solution</h2>
+					<div class="spacer-3rem" style="display: flex; justify-content: flex-end; gap: 1rem; height: 50px;">
+						<span class="spacer-3rem">Always expanding</span>
 						<div class="dotted-border" style="margin: 0;"></div>
 					</div>
     	  </section>
 
 			</main>
 
-			<footer id="contact" class="bg-dark color-white text-center container" style="display: flex; flex-direction: column; row-gap: 8rem;">
+			<footer id="contact" class="bg-dark color-white text-center container">
 				<div>
-					<span class="inline text-lg spacer-2rem">if ( 	wannaWorkWithMe === true ) {</span>
-					<div class="wave-letters text-8xl font-weight-600 spacer-2rem">Let’s 	talk</div>
+					<span class="inline text-lg spacer-2rem">if ( wannaWorkWithMe == true ) &#123;</span>
+					<div class="text-8xl font-weight-600 spacer-2rem" style="letter-spacing: -0.05em;">Let’s 	talk</div>
 					<a class="btn text-lg bg-white color-900 font-weight-600 inline">Get in Touch</a>
 				</div>
 				<div class="footer-column">
@@ -228,19 +240,7 @@
 						</a></li>
 					</ul>
 				</div>
-				<!-- <div class="footer-column">
-					<span class="menu-title spacer-3rem inline">{ Socials }</span>
-					<ul style="display: flex; flex-direction: column; gap: 1.5rem;">
-						<li><a href="" class="btn-4 text-base color-900 text-nowrap inline color-white">
-							Linkedin
-							<div class="underlines">
-								<div class="default-underline"></div>
-								<div class="moving-underline"></div>
-							</div>
-						</a></li>
-					</ul>
-				</div> -->
-				<span>© Made by <a href="">Giovanni Ruggieri</a> - Powered by 	a text editor (<a href="">VSCode</a>)</span>
+				<span>© Made by <a href="linkedin.com">Giovanni Ruggieri</a> - Powered by 	a text editor (<a href="">VSCode</a>)</span>
 			</footer>
 		</div>
 	</body>

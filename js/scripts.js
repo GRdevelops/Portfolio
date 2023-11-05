@@ -58,15 +58,19 @@ function loadWork() {
   const contentContainer = document.getElementById('work');
   const contentTemplate = document.getElementById('case-study').content;
 
-  data.forEach(item => {
+  data.forEach((item, index) => {
     const clone = document.importNode(contentTemplate, true);
-      clone.getElementById('content-image').src = item.imageUrl;
-      clone.getElementById('content-title').textContent = item.title;
-      clone.getElementById('content-subtitle').textContent =item.subtitle || '';
-      clone.getElementById('content-description').textContent = item.description;
-      clone.getElementById('first-skill').textContent = item.firstSkill;
-      clone.getElementById('second-skill').textContent = item.secondSkill;
-      contentContainer.appendChild(clone);
+    clone.querySelector('.content-image').src = item.imageUrl;
+    clone.querySelector('.content-title').textContent = item.title;
+    clone.querySelector('.content-subtitle').textContent = item.subtitle || '';
+    clone.querySelector('.content-description').textContent = item.description;
+    clone.getElementById('first-skill').textContent = item.firstSkill;
+    clone.getElementById('second-skill').textContent = item.secondSkill;
+    
+    // Append the clone to the container
+    contentContainer.appendChild(clone);
+
+    // Do not add margin bottom if it's the last element
   });
 };
 
@@ -117,9 +121,11 @@ window.addEventListener('scroll', () => {
 
 
 
+
+
 // Navmenu animation OPEN
 
-const menuButton = document.getElementById('menu-button');
+const menuButton = document.querySelectorAll('.menu-button');
 const closeButton = document.getElementById('close-menu');
 const layers = document.querySelectorAll('.layer');
 const options = document.querySelectorAll('.option');
@@ -169,6 +175,8 @@ const openMenu = () => {
     });
   }, 500);
 }
+
+// Navmenu animation CLOSE
 
 const closeMenu = () => {
   let animationsCompleted = 0;
@@ -227,7 +235,9 @@ options.forEach(option => {
   });
 });
 
-menuButton.addEventListener('click', openMenu);
+menuButton.forEach(element => {
+  element.addEventListener('click', openMenu);
+});
 closeButton.addEventListener('click', closeMenu);
 
 
