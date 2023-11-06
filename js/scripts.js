@@ -64,8 +64,8 @@ function loadWork() {
     clone.querySelector('.content-title').textContent = item.title;
     clone.querySelector('.content-subtitle').textContent = item.subtitle || '';
     clone.querySelector('.content-description').textContent = item.description;
-    clone.getElementById('first-skill').textContent = item.firstSkill;
-    clone.getElementById('second-skill').textContent = item.secondSkill;
+    clone.querySelectorAll('.first.skill').forEach(element => element.textContent = item.firstSkill );
+    clone.querySelectorAll('.second.skill').forEach(element => element.textContent = item.secondSkill );
     
     // Append the clone to the container
     contentContainer.appendChild(clone);
@@ -139,7 +139,7 @@ const openMenu = () => {
   layers.forEach((layer, index) => {
     layer.animate([
       { height: '0' },
-      { height: '100dvh' } // Assuming full height is desired
+      { height: '110vh' } // Assuming full height is desired
     ], {
       duration: 700,
       fill: 'forwards',
@@ -204,7 +204,7 @@ const closeMenu = () => {
   // Reverse the animations for layers
   layers.forEach((layer, index) => {
     layer.animate([
-      { height: '100vh' },
+      { height: '110vh' },
       { height: '0' }
     ], {
       duration: 700,
@@ -241,8 +241,5 @@ menuButton.forEach(element => {
 closeButton.addEventListener('click', closeMenu);
 
 
-const wordsToWave = document.querySelectorAll('wave-letters');
 
-const waveLetters = () => {
 
-}

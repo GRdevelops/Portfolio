@@ -81,17 +81,16 @@
 				<!-- Hero -->
 				<section id="hero" class="container">
 					<div>
-						<h1 class="text-8xl color-800 font-weight-600">Giovanni 	Ruggieri</h1>
-						<h1 class="text-8xl color-800 font-weight-600">Web Developer</h1>
+						<h1 class="text-8xl color-800 font-weight-600">Giovanni 	Ruggieri <br> Web Developer</h1>
 					</div>
 
 					<div class="padding-2" style="display: flex; 	justify-content: space-between; align-items: center;">
 						<div>
-							<span class="text-xl font-weight-500">{ Welcome }</span>
+							<span class="text-xl">{ Welcome }</span>
 							<span id="emoji" class="inline text-2xl">👋🏻</span>
 						</div>
 
-						<a href="" class="btn-2 text-xl color-900 font-weight-500">
+						<a href="" class="btn-2 text-xl color-900">
 							<div class="arrow-wrapper">
 								<img class="arrow-2 primary" src="./images/	arrow-icon-1.svg" alt=""/>
 								<img class="arrow-2 secondary" src="./images/	arrow-icon-1.svg" alt=""/>
@@ -100,18 +99,18 @@
 						</a>
 					</div>
 
-    	    <div style="background-color: #ddd; height: 60dvw; max-height: 600px; border-radius: 2rem;">
+    	    <div style="background-color: #ddd; height: 60dvw; max-height: 600px; border-radius: 1rem;">
     	    </div>
 				</section>
 
 				<!-- About Me -->
     	  <section id="about-me" class="container">
     	    <div class="first-row padding-3">
-						<p class="font-weight-600 color-900">As a web 	developer, I focus on turning beautiful interfaces into 	functional products through up-to-date technologies and 	clean code solutions.</p>
+						<p class="text-6xl font-weight-600 color-900">As a web 	developer, I focus on turning beautiful interfaces into 	functional products through up-to-date technologies and 	clean code solutions.</p>
 						<div class="v-l-wrapper">
 							<div class="line vertical"></div>
 						</div>
-						<span class="text-xl color-900 font-weight-600 text-nowrap">{ About 	me }</span>
+						<span class="text-2xl color-900 font-weight-500 text-nowrap">{ About 	me }</span>
     	    </div>
 					<div class="overflow-hidden"><div class="line"></div></div>
     	  </section>
@@ -121,7 +120,7 @@
 				<section id="my-skills" class="container">
     	    <div class="second-row padding-3">
 
-						<span class="text-xl color-900 font-weight-600">{ My 	skills }</span>
+						<span class="text-2xl color-900 font-weight-500">{ My 	skills }</span>
 
 						<div class="content color-900">
 							<div class="v-l-wrapper">
@@ -155,15 +154,21 @@
 
 						<div class="content-wrapper padding-2">
 							<div>
-								<h3 class="content-title text-6xl color-900 	font-weight-600 spacer-1rem"></h3>
+								<h3 class="content-title text-6xl color-900 	font-weight-600"></h3>
 								<span class="content-subtitle"></span>
 							</div>
+
+							<div class="skills mobile nowrap">
+								<span class="first skill bg-green inline"></span>
+								<span class="second skill bg-red inline"></span>
+							</div>
+							
 							<div>
-								<p class="content-description padding-1" 	style="margin-bottom: .5rem;"></p>
-								<div style="display: flex; justify-content: 	space-between; align-items: center; column-gap: 2rem;">
-									<div class="skills inline-flex nowrap">
-										<span id="first-skill" class="skill bg-green inline"></span>
-										<span id="second-skill" class="skill bg-red inline"></span>
+								<p class="content-description padding-1"></p>
+								<div class="details">
+									<div class="skills desktop nowrap">
+										<span class="first skill bg-green inline"></span>
+										<span class="second skill bg-red inline"></span>
 									</div>
 
 									<div class="buttons">
@@ -204,12 +209,12 @@
 			<footer id="contact" class="bg-dark color-white text-center container">
 				<div>
 					<span class="inline text-lg spacer-2rem">if ( wannaWorkWithMe == true ) &#123;</span>
-					<div class="text-8xl font-weight-600 spacer-2rem" style="letter-spacing: -0.05em;">Let’s 	talk</div>
+					<div class="text-8xl font-weight-600 spacer-2rem" style="font-size: clamp(4rem, 10vw, 8rem);">Let’s 	talk</div>
 					<a class="btn text-lg bg-white color-900 font-weight-600 inline">Get in Touch</a>
 				</div>
 				<div class="footer-column">
-					<span class="menu-title spacer-3rem inline">{ Navigation }</span>
-					<ul style="display: flex; flex-direction: column; gap: 1.5rem;">
+					<ul>
+						<span class="menu-title text-base spacer-1rem inline">{ Navigation }</span>
 						<li><a href="" class="btn-4 text-base text-nowrap inline color-white">
 							Home
 							<div class="underlines">
@@ -240,7 +245,7 @@
 						</a></li>
 					</ul>
 				</div>
-				<span>© Made by <a href="linkedin.com">Giovanni Ruggieri</a> - Powered by 	a text editor (<a href="">VSCode</a>)</span>
+				<span class="text-base" style="line-height: 1.5; margin: 0 2rem;">© Made by <a href="linkedin.com">Giovanni Ruggieri</a> - Powered by 	a text editor (<a href="">VSCode</a>)</span>
 			</footer>
 		</div>
 	</body>
