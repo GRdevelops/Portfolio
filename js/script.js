@@ -27,25 +27,34 @@ startAnimationCycle();
 function loadWork() {
 	const data = [
 		{
-			imageUrl: './images/projects/primopiano-cover.png',
+			link: 'https://www.primopianovieste.it/',
+			github: 'https://github.com/GRdevelops/Portfolio',
+			imageUrl: './images/projects/primopiano-cover.webp',
+			alt: '',
 			title: 'PrimoPiano Luxury Accomodations',
-			subtitle: '- B&B in Vieste, Italy.',
+			subtitle: '- Rental business in Vieste, Italy.',
 			description:
-				'This project showcases a high-end accommodation rental website that I enhanced with a sophisticated Envato template, integrating custom pages and a smooth booking system. The result is a contemporary and intuitive interface that elevates the user experience far beyond its original look.',
+				'A refurbished website for an accomodation rental business in Vieste. I used an envato template and modified it, creating additional pages and sections. I also implemented a new booking engine for online reservations, making this a fully functional official website.',
 			firstSkill: 'HTML',
 			secondSkill: 'CSS',
 		},
 		{
-			imageUrl: './images/2.webp',
+			link: 'https://grdevelops.github.io/Welcome-To-The-Blog/',
+			github: 'https://github.com/GRdevelops/Welcome-To-The-Blog',
+			imageUrl: './images/projects/blog-cover.webp',
+			alt: '',
 			title: 'Welcome to the blog',
 			subtitle: '- Simple blog with javascript functionalities',
 			description:
-				'A user-friendly blog with practical JavaScript features including a persistent pop-up that stays closed upon page reload and a handy article sorting functionality that categorizes posts for streamlined navigation and improved reader experience.',
+				'A user-friendly blog with practical JavaScript features including a persistent pop-up that stays closed upon page reload and a handy article sorting functionality that categorizes posts based on your selection.',
 			firstSkill: 'Javascript',
 			secondSkill: 'CSS',
 		},
 		{
-			imageUrl: './images/5.webp',
+			link: '',
+			github: 'https://github.com/GRdevelops/Quote-Machine',
+			imageUrl: './images/projects/quote-machine.png',
+			alt: '',
 			title: 'Quote machine',
 			subtitle: '- API connected quote generator using React',
 			description:
@@ -57,20 +66,38 @@ function loadWork() {
 
 	const contentContainer = document.getElementById('work');
 	const contentTemplate = document.getElementById('case-study').content;
+	
+	data.forEach((item) => {
+	    const clone = document.importNode(contentTemplate, true);
+			const visitButton = clone.querySelector('.btn-3');
+			const seeOnGitHub = clone.querySelector('.btn-4');	
+	    const imageWrapper = clone.querySelector('.image-wrapper');
+	    const contentImage = clone.querySelector('.content-image');
+	    const contentTitle = clone.querySelector('.content-title');
+	    const contentSubtitle = clone.querySelector('.content-subtitle');
+	    const contentDescription = clone.querySelector('.content-description');
+	    const firstSkillElements = clone.querySelectorAll('.first.skill');
+	    const secondSkillElements = clone.querySelectorAll('.second.skill');	
 
-	data.forEach((item, index) => {
-		const clone = document.importNode(contentTemplate, true);
-		clone.querySelector('.content-image').src = item.imageUrl;
-		clone.querySelector('.content-title').textContent = item.title;
-		clone.querySelector('.content-subtitle').textContent = item.subtitle || '';
-		clone.querySelector('.content-description').textContent = item.description;
-		clone.querySelectorAll('.first.skill').forEach((element) => (element.textContent = item.firstSkill));
-		clone.querySelectorAll('.second.skill').forEach((element) => (element.textContent = item.secondSkill));
-
-		// Append the clone to the container
-		contentContainer.appendChild(clone);
-
-		// Do not add margin bottom if it's the last element
+			visitButton.href = item.link;
+			visitButton.title = item.link;
+			seeOnGitHub.href = item.github;
+			seeOnGitHub.title = item.github;	
+	    imageWrapper.href = item.link;
+			imageWrapper.title = item.link; 
+	    contentImage.src = item.imageUrl;
+	    contentImage.alt = item.title;
+	    contentTitle.textContent = item.title;
+	    contentSubtitle.textContent = item.subtitle;
+	    contentDescription.textContent = item.description;	
+	    firstSkillElements.forEach((element) => {
+	        element.textContent = item.firstSkill;
+	    });	
+	    secondSkillElements.forEach((element) => {
+	        element.textContent = item.secondSkill;
+	    });
+	    // Append the clone to the container
+	    contentContainer.appendChild(clone);
 	});
 }
 
@@ -218,3 +245,20 @@ menuOpenButton.forEach((element) => {
 	element.addEventListener('click', openMenu);
 });
 menuCloseButton.addEventListener('click', closeMenu);
+
+
+// Text animation (Using SplitType library)
+document.addEventListener('DOMContentLoaded', function() {
+	const myText = new SplitType('.my-text', {
+			types: 'chars'
+	});
+
+	// Animate each character with GSAP
+	gsap.to(myText.chars, {
+			y: 0, 
+			stagger: 0.05, 
+			delay: 0.2, 
+			duration: 0.1 
+	});
+});
+

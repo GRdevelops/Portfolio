@@ -4,24 +4,42 @@
 	box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Inter', Arial, Helvetica, sans-serif;
-	background-color: #eee;
+	/* background-color: #bbb; */
+	/* background-color: #515166; */
+	background-color: white;
+
 }
 
 a {
 	color: inherit;
 }
 
-.page-wrapper {
+/* .page-wrapper {
 	position: relative;
 	overflow: hidden;
 	max-width: 1920px;
 	margin: 2rem auto;
-	background-color: white;
+	background-color: #fafafa;
 	border: 1rem;
 	border-radius: 1rem;
 	box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+	transition: all 150ms ease;
+} */
+
+.page-wrapper {
+	position: relative;
+	overflow: hidden;
+	max-width: 1920px;
+	margin: 0 auto;
+	background-color: white;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
 	transition: all 150ms ease;
 }
 
@@ -42,32 +60,35 @@ p {
 	color: white; /* color of the text when highlighted */
 }
 
-h1 {
+.h1-wrapper {
 	margin-top: 5rem;
-	line-height: 1.1;
+}
+
+h1 {
+	line-height: 1.2;
 	transition: all 150ms ease;
 }
 
 @media only screen and (max-width: 768px) {
-	h1 {
+	.h1-wrapper {
 		margin-top: 2rem;
 	}
 }
 
 @media only screen and (max-width: 450px) {
-	h1 {
-		margin-bottom: 0.5rem;
+	.h1-wrapper {
+		margin-bottom: 1rem;
 	}
 }
 
 @media only screen and (max-width: 310px) {
-	h1 {
+	.h1-wrapper {
 		margin-top: 4rem;
 	}
 }
 
 @media only screen and (max-width: 515px) and (min-width: 460px) {
-	h1 {
+	.h1-wrapper {
 		margin-top: 4rem;
 	}
 }
@@ -137,6 +158,15 @@ h1 {
 	/* 112px to 136px */
 	font-size: clamp(4rem, 12vw, 10rem);
 	letter-spacing: -0.05em;
+}
+
+.font-weight-200 {
+	font-weight: 200;
+	letter-spacing: -0.7em;
+}
+
+.font-weight-300 {
+	font-weight: 300;
 }
 
 .font-weight-base {
@@ -361,6 +391,35 @@ a:hover .item.two {
 	transform: translateY(0);
 }
 
+::-webkit-scrollbar {
+	width: 8px; 
+	/* height: 12px;  */
+}
+
+::-webkit-scrollbar-track {
+	background: hsla(0, 0%, 40%, 0.1); 
+}
+
+::-webkit-scrollbar-thumb {
+	background: hsla(0, 0%, 40%, 0.8); 
+	border-radius: 1rem;
+	transition: all 150ms ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: hsl(0, 0%, 40%, 1);
+}
+
+.profile-picture {
+	background-image: url('../images/profilegr.webp'); 
+	background-position: center;
+	background-size: cover;
+	height: 60dvw; 
+	max-height: 600px; 
+	border-radius: 1rem;
+}
+
+
 /* Button 1 */
 
 .btn {
@@ -370,6 +429,7 @@ a:hover .item.two {
 	border-radius: 3rem;
 	cursor: pointer;
 	transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+	text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -569,6 +629,7 @@ header {
 
 .open-menu {
 	position: absolute;
+	z-index: 10;
 	float: right;
 	top: 3rem;
 	right: 3rem;
@@ -628,8 +689,6 @@ header {
 	width: 100%;
 	z-index: 99;
 	display: none;
-	/* justify-content: center;
-	align-items: center; */
 }
 
 .layers {
@@ -742,6 +801,15 @@ header {
 }
 
 /* Hero */
+
+.my-text {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.char {
+	transform: translateY(110%);
+	transition: transform .5s;
+}
 
 #emoji {
 	width: clamp(1.5rem, 3vw, 2rem);
@@ -1021,7 +1089,7 @@ header {
 	aspect-ratio: 21 / 9;
 	overflow: hidden;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	border-radius: 1rem;
 	box-shadow: -3px 9px 26px -6px rgba(0, 0, 0, 0.17);
@@ -1041,12 +1109,12 @@ header {
 
 .bg-green {
 	color: #156b00;
-	background-color: #d0ffcf;
+	background-color: #e3ffe2;
 }
 
 .bg-red {
-	color: #d74444;
-	background-color: #ffcfcf;
+	color: #a80303;
+	background-color: #ffe2e2;
 }
 
 .skills {

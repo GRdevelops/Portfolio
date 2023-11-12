@@ -3,31 +3,35 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<meta name="description" content="Giovanni Ruggieri is a front-end engineer crafting immersive web experiences with a keen eye on user experience and cutting-edge functionality. His portfolio showcases his dedication for effective and efficient web development solutions." />
+		<title>Giovanni Ruggieri • Front-end Developer</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
 		<link rel="stylesheet" href="./css/reset.css" />
 		<link rel="stylesheet" href="./css/styles.css" />
-		<script defer src="./js/scripts.js"></script>
+		<script defer src="https://unpkg.com/split-type"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script defer src="./js/script.js"></script>
 	</head>
 	<body>
 		<div class="page-wrapper">
 							
 			<header>
-				<a class="open-menu desktop btn text-lg color-white font-weight-600 bg-dark">
-							Menu
-				</a>
-				<a class="open-menu mobile bg-dark">
+				<button class="open-menu desktop btn text-lg color-white font-weight-500 bg-dark">
+					Menu
+				</button>
+				<button class="open-menu mobile bg-dark">
 					<div class="wrapper">
 						<div class="bar"></div>
 						<div class="bar"></div>
 						<div class="bar"></div>
 					</div>
-				</a>
+				</button>
 				<nav>
 					<div class="nav-menu">
-						<a id="close-menu" class="bg-white">
+						<button id="close-menu" class="bg-white">
 							<div class="bar one"></div>
 							<div class="bar two"></div>
-						</a>
+						</button>
 						<div class="layers">
 							<div class="layer one"></div>
 							<div class="layer two"></div>
@@ -79,8 +83,12 @@
 			<main>
 				<!-- Hero -->
 				<section id="hero" class="container">
-					<div>
-						<h1 class="text-8xl color-800 font-weight-600">Giovanni 	Ruggieri <br> Web Developer</h1>
+					<div class="h1-wrapper font-weight-600">
+						<h1 class="text-8xl color-800 my-text inline">Giovanni<span>&nbsp;</span></h1>
+						<h1 class="text-8xl color-800 my-text inline">Ruggieri</h1>
+						<br>
+						<h1 class="text-8xl color-800 my-text inline">Front-end<span>&nbsp;</span></h1> 
+						<h1 class="text-8xl color-800  my-text inline">Developer</h1>
 					</div>
 
 					<div class="padding-2 flex justify-space-between align-center">
@@ -89,7 +97,7 @@
 							<span id="emoji" class="inline"><img src="./images/waving-hand-ios.png" alt=""/></span>
 						</div>
 
-						<a href="" class="btn-2 text-xl color-900">
+						<a href="#about-me" class="btn-2 text-xl color-900">
 							<div class="arrow-wrapper">
 								<img class="arrow-2 primary" src="./images/	arrow-icon-1.svg" alt=""/>
 								<img class="arrow-2 secondary" src="./images/	arrow-icon-1.svg" alt=""/>
@@ -98,15 +106,13 @@
 						</a>
 					</div>
 
-    	    <div style="background-color: #ddd; height: 60dvw; max-height: 600px; border-radius: 1rem;">
-    	    </div>
+    	    <div class="profile-picture"></div>
 				</section>
 
 				<!-- About Me -->
     	  <section id="about-me" class="container">
     	    <div class="first-row padding-3" style="justify-items: flex-end;">
-						<p class="text-6xl font-weight-600 color-900">As a web 	developer, I focus on turning beautiful interfaces into 	functional products through scalable and versatile solutions.</p>
-						<!-- <p class="text-6xl font-weight-600 color-900">As a web 	developer, I focus on turning beautiful interfaces into 	functional products through up-to-date technologies and 	clean code solutions.</p> -->
+						<p class="text-6xl font-weight-600 color-900">As a front-end developer, I focus on turning digital interfaces into functional products through standard-compliant and user-centred solutions.</p>
 						<div class="v-l-wrapper flex justify-center">
 							<div class="line vertical"></div>
 						</div>
@@ -152,9 +158,9 @@
 					<h2 class="parallax-heading text-9xl padding-2" data-speed="0.5">Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work</h2>
 
 					<template id="case-study">
-						<div class="image-wrapper">
+						<a href="" target="_blank" class="image-wrapper">
 							<img class="content-image" src="" alt="">
-						</div>
+						</a>
 
 						<div class="content-wrapper padding-2">
 							<div>
@@ -176,14 +182,14 @@
 									</div>
 
 									<div class="buttons">
-										<a href="" class="btn-4 text-medium color-900 text-nowrap">
-											See on Github
+										<a href="" target="_blank" class="btn-4 text-medium color-900 text-nowrap">
+											See on GitHub
 											<div class="underlines">
 												<div class="default-underline"></div>
 												<div class="moving-underline"></div>
 											</div>
 										</a>
-										<a href="" class="btn-3 inline btn-2 text-medium color-800 text-nowrap">
+										<a href="" target="_blank" class="btn-3 inline btn-2 text-medium color-800 text-nowrap">
 											Visit Site
 											<div class="arrow-wrapper">
 												<img class="arrow-2 primary" src="./images/	arrow-icon-1.svg" alt=""/>
@@ -214,11 +220,11 @@
 				<div>
 					<span class="inline text-lg spacer-2rem">if ( wannaWorkWithMe == true ) &#123;</span>
 					<div class="text-8xl font-weight-600 spacer-2rem" style="font-size: clamp(4rem, 10vw, 8rem);">Let’s 	talk</div>
-					<a class="btn text-lg bg-white color-900 font-weight-600 inline">Get in Touch</a>
+					<a href="mailto: gianniruggieri99@gmail.com" class="btn text-lg bg-white color-900 font-weight-600 inline">Get in Touch</a>
 				</div>
 				<div class="footer-column">
+					<span class="menu-title text-base spacer-2rem inline">{ Navigation }</span>
 					<ul>
-						<span class="menu-title text-base spacer-1rem inline">{ Navigation }</span>
 						<li><a href="" class="btn-4 text-base text-nowrap inline color-white">
 							Home
 							<div class="underlines">
@@ -226,21 +232,21 @@
 								<div class="moving-underline"></div>
 							</div>
 						</a></li>
-						<li><a href="" class="btn-4 text-base text-nowrap inline color-white">
+						<li><a href="#about-me" class="btn-4 text-base text-nowrap inline color-white">
 							About
 							<div class="underlines">
 								<div class="default-underline"></div>
 								<div class="moving-underline"></div>
 							</div>
 						</a></li>
-						<li><a href="" class="btn-4 text-base  text-nowrap inline color-white">
+						<li><a href="#work" class="btn-4 text-base  text-nowrap inline color-white">
 							Work
 							<div class="underlines">
 								<div class="default-underline"></div>
 								<div class="moving-underline"></div>
 							</div>
 						</a></li>
-						<li><a href="" class="btn-4 text-base text-nowrap inline color-white">
+						<li><a href="mailto: gianniruggieri99@gmail.com" class="btn-4 text-base text-nowrap inline color-white">
 							Contact
 							<div class="underlines">
 								<div class="default-underline"></div>
@@ -249,7 +255,7 @@
 						</a></li>
 					</ul>
 				</div>
-				<span class="text-base" style="line-height: 1.5; margin: 0 2rem;">© Made by <a href="linkedin.com">Giovanni Ruggieri</a> - Powered by 	a text editor (<a href="">VSCode</a>)</span>
+				<span class="text-base" style="line-height: 1.5; margin: 0 2rem;">© Designed & Coded by <a href="https://www.linkedin.com/in/giovanniru/" target="_blank">Giovanni Ruggieri</a> - See the <a href="https://github.com/GRdevelops/Portfolio" target="_blank">source code</a> of this portfolio.</span>
 			</footer>
 		</div>
 	</body>
