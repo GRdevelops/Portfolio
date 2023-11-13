@@ -51,7 +51,7 @@ function loadWork() {
 			secondSkill: 'CSS',
 		},
 		{
-			link: '',
+			link: 'https://quote-generator-using-react.netlify.app/',
 			github: 'https://github.com/GRdevelops/Quote-Machine',
 			imageUrl: './images/projects/quote-machine.png',
 			alt: '',
