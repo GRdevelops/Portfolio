@@ -1,5 +1,5 @@
+// Check if there's a hash in the URL
 window.onload = () => {
-	// Check if there's a hash in the URL
 	if (window.location.hash) {
 		history.replaceState('', document.title, window.location.pathname + window.location.search);
 	}
