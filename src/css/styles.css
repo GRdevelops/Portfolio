@@ -117,7 +117,7 @@ h1 {
 
 .text-2xl {
 	/* 24px to 30px */
-	font-size: clamp(1.25rem, 1.875vw, 1.875rem);
+	font-size: clamp(1.25rem, 2.5vw, 1.875rem);
 	letter-spacing: -0.03em;
 }
 
@@ -630,8 +630,10 @@ a:hover .item.two {
 /* Header */
 
 header {
-	position: absolute;
+	position: fixed;
 	width: 100%;
+	max-width: 1920px;
+	z-index: 99;
 }
 
 .open-menu {
@@ -667,7 +669,6 @@ header {
 		height: 48px;
 		width: 48px;
 		border-radius: 50%;
-		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -768,6 +769,14 @@ header {
 	transform: rotate(-135deg) translateY(-30%);
 	width: 0.4em;
 	height: auto;
+}
+
+.absolutely-centered {
+	position: absolute; 
+	left: 0; 
+	right: 0; 
+	margin: 0 auto;
+	max-width: 1920px; 
 }
 
 #close-menu {
@@ -920,12 +929,12 @@ header {
 
 .second-row ul > li {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 }
 
 .second-row ul > li > span {
-	position: relative;
-	top: 2px;
+	display: flex;
+	align-self: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1239,4 +1248,10 @@ footer .btn:hover {
 
 .menu-title {
 	opacity: 0.9;
+}
+
+footer .links {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
 }

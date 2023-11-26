@@ -5,7 +5,7 @@ window.onload = () => {
 	}
 };
 
-// Controls interval between a full square animation
+// Control interval between a full square animation
 const square = document.getElementById('square');
 const squareWrapper = document.querySelector('.square-wrapper');
 
@@ -27,6 +27,18 @@ startAnimationCycle();
 function loadWork() {
 	const data = [
 		{
+			link: 'https://open-ai-workout-generator.vercel.app/',
+			github: 'https://github.com/GRdevelops/openAI-Workout-Generator',
+			imageUrl: './images/projects/ai-workout-generator-cover.webp',
+			alt: '',
+			title: 'OpenAI Workout Generator',
+			subtitle: '- React state management, API calls & instructions, Server implementation & Auth0.',
+			description:
+				'OpenAI Workout Generator is a web app that lets you create a bespoke workout based on your level, equipment and goals. The challenges were: managing state flow, connecting data across components, maintaining high modularity and uncontaminated logic (which I could see becoming increasingly important). The backend is supported by Vercel serverless functions. Authentication is managed by Auth0. I enjoyed keeping the code clean with Emotion and minimal comments. Overall, this project was a major learning experience.',
+			firstSkill: 'React',
+			secondSkill: 'RESTful APIs',
+		},
+		{
 			link: 'https://www.primopianovieste.it/',
 			github: 'https://github.com/GRdevelops/Portfolio',
 			imageUrl: './images/projects/primopiano-cover.webp',
@@ -34,9 +46,9 @@ function loadWork() {
 			title: 'PrimoPiano Luxury Accomodations',
 			subtitle: '- Rental business in Vieste, Italy.',
 			description:
-				'A refurbished website for an accomodation rental business in Vieste. I used an envato template and modified it, creating additional pages and sections. I also implemented a new booking engine for online reservations, making this a fully functional official website.',
-			firstSkill: 'HTML',
-			secondSkill: 'CSS',
+				'A refurbished website for an accomodation rental business in Vieste. I used an envato template and modified it, creating additional pages and sections. I also implemented a new booking engine for online reservations, making this a fully functional official website. This was my first coding project.',
+			firstSkill: 'CSS',
+			secondSkill: 'HTML',
 		},
 		{
 			link: 'https://grdevelops.github.io/Welcome-To-The-Blog/',
@@ -46,7 +58,7 @@ function loadWork() {
 			title: 'Welcome to the blog',
 			subtitle: '- Simple blog with javascript functionalities',
 			description:
-				'A user-friendly blog with practical JavaScript features including a persistent pop-up that stays closed upon page reload and a handy article sorting functionality that categorizes posts based on your selection.',
+				'A user-friendly blog with practical JavaScript features including a persistent pop-up that stays closed upon page reload and a handy article sorting functionality that categorizes posts based on your selection. This was my second coding project.',
 			firstSkill: 'Javascript',
 			secondSkill: 'CSS',
 		},
@@ -58,7 +70,7 @@ function loadWork() {
 			title: 'Quote machine',
 			subtitle: '- API connected quote generator using React',
 			description:
-				'A React-based quote generator that fetches and displays random quotes from an API, providing users with an interactive and inspirational experience.',
+				'A React-based quote generator that fetches and displays random quotes from an API, providing users with an interactive and inspirational experience. This was my third coding project.',
 			firstSkill: 'React',
 			secondSkill: 'CSS',
 		},
