@@ -8,10 +8,7 @@ This portfolio rapresents myself and my way of thinking. I like technically func
 Hopefully you like it, if not, I respect anybodies' style and taste. What's important to me, is that I can showcase my skills well and give as much essential information to potential employers and clients that don't have much time to waste across millions of existing options.
 
 ## Deployment
-This website is live at https://www.primopianovieste.it/
-
-<img src="https://github.com/GRdevelops/Portfolio/assets/121963326/f342485e-87ed-4b7f-9bd2-b5026609ec1a" width="500">
-
+This website is live at https://www.desengineers.co/
 
 ## Features
 - Responsive design using media queries.
