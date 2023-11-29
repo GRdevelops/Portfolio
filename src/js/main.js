@@ -283,15 +283,15 @@ darkModeButton.addEventListener('click', () => {
 		}, 100);
 });
 
-// Check and apply user's preference on page load
-document.addEventListener('DOMContentLoaded', () => {
-	if (localStorage.getItem('darkMode') === 'true') {
-			document.body.classList.add('dark');
-	}
-});
+// // Check and apply user's preference on page load
+// document.addEventListener('DOMContentLoaded', () => {
+// 	if (localStorage.getItem('darkMode') === 'true') {
+// 			document.body.classList.add('dark');
+// 	}
+// });
 
-// Update preference on toggle
-darkModeButton.addEventListener('click', () => {
-	const isDarkMode = document.body.classList.toggle('dark');
-	localStorage.setItem('darkMode', isDarkMode);
-});
+// // Update preference on toggle
+// darkModeButton.addEventListener('click', () => {
+// 	const isDarkMode = document.body.classList.toggle('dark');
+// 	localStorage.setItem('darkMode', isDarkMode);
+// });

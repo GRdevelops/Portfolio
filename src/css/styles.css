@@ -51,8 +51,8 @@ body.dark {
 	overflow: hidden;
 	max-width: 1920px;
 	margin: 0 auto;
-	border-left: 1px solid hsla(0, 0%, 0%, 0.9);
-	border-right: 1px solid hsla(0, 0%, 0%, 0.9);
+	border-left: 1px solid var(--text-700);
+	border-right: 1px solid var(--text-700);
 	transition: all 150ms ease;
 }
 
@@ -142,7 +142,7 @@ h1 {
 
 .text-4xl {
 	/* 40px to 48px */
-	font-size: clamp(1.5rem, 3vw, 3rem);
+	font-size: clamp(1.5rem, 3.5vw, 3.5rem);
 }
 
 .text-6xl {
