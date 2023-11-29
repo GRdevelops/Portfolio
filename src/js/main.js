@@ -155,7 +155,6 @@ window.addEventListener('scroll', () => {
 });
 
 // Navmenu animation OPEN
-
 const menuOpenButton = document.querySelectorAll('.open-menu');
 const menuCloseButton = document.getElementById('close-menu');
 const layers = document.querySelectorAll('.layer');
@@ -205,7 +204,6 @@ const openMenu = () => {
 };
 
 // Navmenu animation CLOSE
-
 const closeMenu = () => {
 	let animationsCompleted = 0;
 
@@ -271,4 +269,29 @@ document.addEventListener('DOMContentLoaded', function () {
 		delay: 0.2,
 		duration: 0.1,
 	});
+});
+
+
+// Dark Mode
+const darkModeButton = document.getElementById('dark-mode');
+
+let debounceTimer;
+darkModeButton.addEventListener('click', () => {
+		clearTimeout(debounceTimer);
+		debounceTimer = setTimeout(() => {
+			document.body.classList.toggle('dark');
+		}, 100);
+});
+
+// Check and apply user's preference on page load
+document.addEventListener('DOMContentLoaded', () => {
+	if (localStorage.getItem('darkMode') === 'true') {
+			document.body.classList.add('dark');
+	}
+});
+
+// Update preference on toggle
+darkModeButton.addEventListener('click', () => {
+	const isDarkMode = document.body.classList.toggle('dark');
+	localStorage.setItem('darkMode', isDarkMode);
 });

@@ -1,11 +1,6 @@
-# PrimoPiano Luxury Accommodations
+# PORTFOLIO
 
-## Introduction
 Welcome to my personal front-end developer portfolio. This repository contains the source code for my portfolio website.
-
-This portfolio rapresents myself and my way of thinking. I like technically functional, light, performant and accessible interfaces with a time-less, minimal, yet visually pleasing look and an intuitive user experience. Typography, sound responsiveness, scalability, and attention to details in general. 
-
-Hopefully you like it, if not, I respect anybodies' style and taste. What's important to me, is that I can showcase my skills well and give as much essential information to potential employers and clients that don't have much time to waste across millions of existing options.
 
 ## Deployment
 This website is live at https://www.desengineers.co/

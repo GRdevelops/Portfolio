@@ -43,20 +43,43 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"></script>
 		<script
+			defer
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			defer
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script
 			type="module"
 			src="./src/js/main.js"></script>
 	</head>
 	<body>
 		<div class="page-wrapper">
 			<header>
-				<button class="open-menu desktop btn text-lg color-white font-weight-500 bg-dark">Menu</button>
-				<button class="open-menu mobile bg-dark">
-					<div class="wrapper">
-						<div class="bar"></div>
-						<div class="bar"></div>
-						<div class="bar"></div>
-					</div>
-				</button>
+				<div class="header-buttons-wrapper">
+					<label id="dark-mode">
+						<input type="checkbox" />
+						<ion-icon
+							name="sunny"
+							class="sun"></ion-icon>
+						<ion-icon
+							name="moon"
+							class="moon"></ion-icon>
+						<span class="toggle internal-shadow"></span>
+						<span class="animateBg"></span>
+					</label>
+
+					<button class="open-menu desktop btn text-lg color-white font-weight-500 bg-dark internal-shadow">Menu</button>
+					<button class="open-menu mobile bg-dark internal-shadow">
+						<div class="wrapper">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+					</button>
+				</div>
+
 				<nav>
 					<div class="nav-menu">
 						<div class="absolutely-centered">
@@ -73,7 +96,7 @@
 							<div class="layer three"></div>
 							<div class="layer four"></div>
 						</div>
-						<ul class="menu-list">
+						<ul class="menu-list color-white">
 							<li class="option one">
 								<a href="#">
 									<svg
@@ -186,14 +209,12 @@
 							href="#about-me"
 							class="btn-2 text-xl color-900">
 							<div class="arrow-wrapper">
-								<img
-									class="arrow-2 primary"
-									src="./images/	arrow-icon-1.svg"
-									alt="" />
-								<img
-									class="arrow-2 secondary"
-									src="./images/	arrow-icon-1.svg"
-									alt="" />
+								<ion-icon
+									name="arrow-back-sharp"
+									class="arrow-2 primary color-900"></ion-icon>
+								<ion-icon
+									name="arrow-back-sharp"
+									class="arrow-2 secondary color-900"></ion-icon>
 							</div>
 							Scroll Down
 						</a>
@@ -214,16 +235,18 @@
 					<div
 						class="first-row padding-3"
 						style="justify-items: flex-end">
-						<p class="text-6xl font-weight-600 color-900">
-							As a front-end developer, my goal is to empower businesses with robust, value-driven, scalable interfaces
-							using cutting-edge technologies and a flair for intuitive design.
+						<p class="text-4xl font-weight-600 color-900">
+							My love for this field began 2 years ago when I started learning the basics of HTML, CSS, JavaScript and
+							UI/UX principles. Since then, I have been constantly learning and improving my skills to become a better
+							developer and a better person. Today, my goal is to help businesses reach their goals through clean code
+							and intuive design.
 						</p>
 						<div class="v-l-wrapper flex justify-center">
-							<div class="line vertical"></div>
+							<div class="line vertical bg-dark"></div>
 						</div>
-						<span class="text-2xl color-900 font-weight-500 text-nowrap">{ About me }</span>
+						<span class="text-2xl color-900 font-weight-500 text-nowrap" style="justify-self: center;">{ About me }</span>
 					</div>
-					<div class="overflow-hidden"><div class="line"></div></div>
+					<div class="overflow-hidden"><div class="line bg-dark"></div></div>
 				</section>
 
 				<!-- My Skills -->
@@ -233,17 +256,18 @@
 					<div class="second-row padding-3">
 						<div class="flex justify-space-between align-center">
 							<span class="text-2xl color-900 font-weight-500">{ My skills }</span>
-							<div class="arrow-wrapper desktop">
-								<img
-									class="arrow-2"
-									src="./images/arrow-icon-1.svg"
-									alt="" />
+							<div
+								class="arrow-wrapper desktop"
+								style="width: clamp(35px, 3vw, 45px); height: clamp(35px, 3vw, 45px)">
+								<ion-icon
+									name="arrow-back-sharp"
+									class="arrow-2"></ion-icon>
 							</div>
 						</div>
 
 						<div class="content color-900">
 							<div class="v-l-wrapper">
-								<div class="line vertical"></div>
+								<div class="line vertical bg-dark"></div>
 							</div>
 
 							<ul class="text-2xl font-weight-600">
@@ -260,12 +284,14 @@
 
 							<div class="square-container">
 								<div class="square-wrapper">
-									<div id="square"></div>
+									<div
+										id="square"
+										class="bg-dark"></div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="overflow-hidden"><div class="line"></div></div>
+					<div class="overflow-hidden"><div class="line bg-dark"></div></div>
 				</section>
 
 				<!-- Work -->
@@ -326,14 +352,12 @@
 											class="btn-3 inline btn-2 text-medium color-800 text-nowrap">
 											Visit Site
 											<div class="arrow-wrapper">
-												<img
-													class="arrow-2 primary"
-													src="./images/	arrow-icon-1.svg"
-													alt="" />
-												<img
-													class="arrow-2 secondary"
-													src="./images/	arrow-icon-1.svg"
-													alt="" />
+												<ion-icon
+													name="arrow-back-sharp"
+													class="arrow-2 primary color-900"></ion-icon>
+												<ion-icon
+													name="arrow-back-sharp"
+													class="arrow-2 secondary color-900"></ion-icon>
 											</div>
 										</a>
 									</div>
@@ -354,7 +378,7 @@
 					<div
 						class="spacer-3rem"
 						style="display: flex; justify-content: flex-end; gap: 1rem; height: 50px">
-						<span class="spacer-3rem">More Coming</span>
+						<span class="spacer-3rem">Constantly Evolving</span>
 						<div
 							class="dotted-border"
 							style="margin: 0"></div>
@@ -479,7 +503,7 @@
 				<span
 					class="text-base"
 					style="line-height: 1.5; margin: 0 2rem"
-					>© Designed & Coded by me<span class="italic"></span> - See the
+					>Built by Giovanni Ruggieri<span class="italic"></span> - See the
 					<a
 						href="https://github.com/GRdevelops/Portfolio"
 						target="_blank"
