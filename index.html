@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-Y66RKYSYY6"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-Y66RKYSYY6');
+		</script>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Giovanni Ruggieri is a front-end engineer crafting immersive web experiences with a keen eye on user experience and cutting-edge functionality. His portfolio showcases his dedication for effective and efficient web development solutions." />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Giovanni Ruggieri is a front-end engineer crafting immersive web experiences with a keen eye on user experience and cutting-edge functionality. His portfolio showcases his dedication for effective and efficient web development solutions." />
 		<title>Giovanni Ruggieri • Front-end Developer</title>
-		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
-		<link rel="stylesheet" href="./src/css/reset.css" />
-		<link rel="stylesheet" href="./src/css/styles.css" />
-		<script defer src="https://unpkg.com/split-type"></script>
-		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script type="module" src="./src/js/main.js"></script>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/images/favicon.png" />
+		<link
+			rel="stylesheet"
+			href="./src/css/reset.css" />
+		<link
+			rel="stylesheet"
+			href="./src/css/styles.css" />
+		<script
+			defer
+			src="https://unpkg.com/split-type"></script>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+			integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+		<script
+			type="module"
+			src="./src/js/main.js"></script>
 	</head>
 	<body>
 		<div class="page-wrapper">
-			
 			<header>
-				<button class="open-menu desktop btn text-lg color-white font-weight-500 bg-dark">
-					Menu
-				</button>
+				<button class="open-menu desktop btn text-lg color-white font-weight-500 bg-dark">Menu</button>
 				<button class="open-menu mobile bg-dark">
 					<div class="wrapper">
 						<div class="bar"></div>
@@ -29,7 +60,9 @@
 				<nav>
 					<div class="nav-menu">
 						<div class="absolutely-centered">
-							<button id="close-menu" class="bg-white">
+							<button
+								id="close-menu"
+								class="bg-white">
 								<div class="bar one"></div>
 								<div class="bar two"></div>
 							</button>
@@ -43,38 +76,78 @@
 						<ul class="menu-list">
 							<li class="option one">
 								<a href="#">
-									<svg class="arrow-nav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M34.8493 18.35H10.7837L19.5167 9.61704L17.1837 7.28406L4.46777 20L17.1837 32.7159L19.5167 30.3829L10.7837 21.6499H34.8493V18.35Z" fill="currentColor"/></svg>
-									<div class="items">	
+									<svg
+										class="arrow-nav"
+										width="40"
+										height="40"
+										viewBox="0 0 40 40"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M34.8493 18.35H10.7837L19.5167 9.61704L17.1837 7.28406L4.46777 20L17.1837 32.7159L19.5167 30.3829L10.7837 21.6499H34.8493V18.35Z"
+											fill="currentColor" />
+									</svg>
+									<div class="items">
 										<div class="item one">Home</div>
 										<div class="item two">Home</div>
-									</div>	
+									</div>
 								</a>
 							</li>
 							<li class="option two">
 								<a href="#about-me">
-									<svg class="arrow-nav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M34.8493 18.35H10.7837L19.5167 9.61704L17.1837 7.28406L4.46777 20L17.1837 32.7159L19.5167 30.3829L10.7837 21.6499H34.8493V18.35Z" fill="currentColor"/></svg>
-									<div class="items">	
+									<svg
+										class="arrow-nav"
+										width="40"
+										height="40"
+										viewBox="0 0 40 40"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M34.8493 18.35H10.7837L19.5167 9.61704L17.1837 7.28406L4.46777 20L17.1837 32.7159L19.5167 30.3829L10.7837 21.6499H34.8493V18.35Z"
+											fill="currentColor" />
+									</svg>
+									<div class="items">
 										<div class="item one">About</div>
 										<div class="item two">About</div>
-									</div>	
+									</div>
 								</a>
 							</li>
 							<li class="option three">
 								<a href="#work">
-									<svg class="arrow-nav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M34.8493 18.35H10.7837L19.5167 9.61704L17.1837 7.28406L4.46777 20L17.1837 32.7159L19.5167 30.3829L10.7837 21.6499H34.8493V18.35Z" fill="currentColor"/></svg>
-									<div class="items">	
+									<svg
+										class="arrow-nav"
+										width="40"
+										height="40"
+										viewBox="0 0 40 40"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M34.8493 18.35H10.7837L19.5167 9.61704L17.1837 7.28406L4.46777 20L17.1837 32.7159L19.5167 30.3829L10.7837 21.6499H34.8493V18.35Z"
+											fill="currentColor" />
+									</svg>
+									<div class="items">
 										<div class="item one">Work</div>
 										<div class="item two">Work</div>
-									</div>	
+									</div>
 								</a>
 							</li>
 							<li class="option four">
 								<a href="#contact">
-									<svg class="arrow-nav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M34.8493 18.35H10.7837L19.5167 9.61704L17.1837 7.28406L4.46777 20L17.1837 32.7159L19.5167 30.3829L10.7837 21.6499H34.8493V18.35Z" fill="currentColor"/></svg>
-									<div class="items">	
+									<svg
+										class="arrow-nav"
+										width="40"
+										height="40"
+										viewBox="0 0 40 40"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M34.8493 18.35H10.7837L19.5167 9.61704L17.1837 7.28406L4.46777 20L17.1837 32.7159L19.5167 30.3829L10.7837 21.6499H34.8493V18.35Z"
+											fill="currentColor" />
+									</svg>
+									<div class="items">
 										<div class="item one">Contact</div>
 										<div class="item two">Contact</div>
-									</div>	
+									</div>
 								</a>
 							</li>
 						</ul>
@@ -84,57 +157,88 @@
 
 			<main>
 				<!-- Hero -->
-				<section id="hero" class="container">
+				<section
+					id="hero"
+					class="container">
 					<div class="h1-wrapper font-weight-600">
 						<h1 class="text-8xl color-800 my-text inline">Giovanni<span>&nbsp;</span></h1>
 						<h1 class="text-8xl color-800 my-text inline">Ruggieri</h1>
-						<br>
-						<h1 class="text-8xl color-800 my-text inline">Front-end<span>&nbsp;</span></h1> 
-						<h1 class="text-8xl color-800  my-text inline">Developer</h1>
+						<br />
+						<h1 class="text-8xl color-800 my-text inline">Front-end<span>&nbsp;</span></h1>
+						<h1 class="text-8xl color-800 my-text inline">Developer</h1>
 					</div>
 
 					<div class="padding-3 flex justify-space-between align-center">
-						<div class="flex align-center" style="gap: .5rem;">
+						<div
+							class="flex align-center"
+							style="gap: 0.5rem">
 							<span class="text-xl">{ Welcome } </span>
-							<span id="emoji" class="inline"><img src="./images/waving-hand-ios.png" alt=""/></span>
+							<span
+								id="emoji"
+								class="inline"
+								><img
+									src="./images/waving-hand-ios.png"
+									alt=""
+							/></span>
 						</div>
 
-						<a href="#about-me" class="btn-2 text-xl color-900">
+						<a
+							href="#about-me"
+							class="btn-2 text-xl color-900">
 							<div class="arrow-wrapper">
-								<img class="arrow-2 primary" src="./images/	arrow-icon-1.svg" alt=""/>
-								<img class="arrow-2 secondary" src="./images/	arrow-icon-1.svg" alt=""/>
+								<img
+									class="arrow-2 primary"
+									src="./images/	arrow-icon-1.svg"
+									alt="" />
+								<img
+									class="arrow-2 secondary"
+									src="./images/	arrow-icon-1.svg"
+									alt="" />
 							</div>
 							Scroll Down
 						</a>
 					</div>
 
-    	    <div class="profile-picture">
-						<img src="./images/profilegr.webp" 		alt="giovanni's picture"
-						srcset="./images/profilegr-mobile.webp 500w,
-										./images/profilegr.webp 2000w" />
+					<div class="profile-picture">
+						<img
+							src="./images/profilegr.webp"
+							alt="Giovanni Ruggieri"
+							srcset="./images/profilegr-mobile.webp 500w, ./images/profilegr.webp 2000w" />
 					</div>
-					
 				</section>
 
 				<!-- About Me -->
-    	  <section id="about-me" class="container">
-    	    <div class="first-row padding-3" style="justify-items: flex-end;">
-						<p class="text-6xl font-weight-600 color-900">As a front-end developer, I focus on turning digital interfaces into functional products through standards-compliant and user-centred solutions.</p>
+				<section
+					id="about-me"
+					class="container">
+					<div
+						class="first-row padding-3"
+						style="justify-items: flex-end">
+						<p class="text-6xl font-weight-600 color-900">
+							As a front-end developer, my goal is to empower businesses with robust, value-driven, scalable interfaces
+							using cutting-edge technologies and a flair for intuitive design.
+						</p>
 						<div class="v-l-wrapper flex justify-center">
 							<div class="line vertical"></div>
 						</div>
-						<span class="text-2xl color-900 font-weight-500 text-nowrap">{ About 	me }</span>
-    	    </div>
+						<span class="text-2xl color-900 font-weight-500 text-nowrap">{ About me }</span>
+					</div>
 					<div class="overflow-hidden"><div class="line"></div></div>
-    	  </section>
-
+				</section>
 
 				<!-- My Skills -->
-				<section id="my-skills" class="container">
-    	    <div class="second-row padding-3">
+				<section
+					id="my-skills"
+					class="container">
+					<div class="second-row padding-3">
 						<div class="flex justify-space-between align-center">
-							<span class="text-2xl color-900 font-weight-500">{ My 	skills }</span>
-							<div class="arrow-wrapper desktop"><img class="arrow-2" src="./images/arrow-icon-1.svg" alt=""></div>
+							<span class="text-2xl color-900 font-weight-500">{ My skills }</span>
+							<div class="arrow-wrapper desktop">
+								<img
+									class="arrow-2"
+									src="./images/arrow-icon-1.svg"
+									alt="" />
+							</div>
 						</div>
 
 						<div class="content color-900">
@@ -144,11 +248,14 @@
 
 							<ul class="text-2xl font-weight-600">
 								<li>React</li>
-								<li>JavaScript</li>
-								<li>CSS&nbsp;<span class="text-lg font-weight-base">-&nbsp;Responsive Design, Emotion library</span></li>
+								<li>JavaScript&nbsp;<span class="text-lg font-weight-base color-700">&nbsp;(ES6+)</span></li>
+								<li>RESTful APIs</li>
+								<li>CSS&nbsp;<span class="text-lg font-weight-base color-700">&nbsp;(Vanilla / CSS-in-JS)</span></li>
 								<li>HTML</li>
 								<li>Git</li>
-								<li>Figma&nbsp;<span class="text-lg font-weight-base">-&nbsp;UI / UX & prototyping</span></li>
+								<li>
+									Figma&nbsp;<span class="text-lg font-weight-base color-700">&nbsp;(UI / UX & prototyping)</span>
+								</li>
 							</ul>
 
 							<div class="square-container">
@@ -157,22 +264,35 @@
 								</div>
 							</div>
 						</div>
-    	    </div>
+					</div>
 					<div class="overflow-hidden"><div class="line"></div></div>
-    	  </section>
+				</section>
 
 				<!-- Work -->
-				<section id="work" class="container">
-					<h2 class="parallax-heading text-9xl padding-2" data-speed="0.5">Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work</h2>
+				<section
+					id="work"
+					class="container">
+					<h2
+						class="parallax-heading text-9xl padding-2"
+						data-speed="0.5">
+						Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work
+					</h2>
 
 					<template id="case-study">
-						<a href="" target="_blank" class="image-wrapper">
-							<img class="content-image" src="" alt="">
+						<a
+							href=""
+							target="_blank"
+							class="image-wrapper">
+							<img
+								class="content-image"
+								src=""
+								alt=""
+								loading="lazy" />
 						</a>
 
 						<div class="content-wrapper padding-2">
 							<div>
-								<h3 class="content-title text-6xl color-900 	font-weight-600"></h3>
+								<h3 class="content-title text-6xl color-900 font-weight-600"></h3>
 								<span class="content-subtitle"></span>
 							</div>
 
@@ -180,7 +300,7 @@
 								<span class="first skill bg-green inline"></span>
 								<span class="second skill bg-red inline"></span>
 							</div>
-							
+
 							<div>
 								<p class="content-description padding-1"></p>
 								<div class="details">
@@ -190,112 +310,183 @@
 									</div>
 
 									<div class="buttons">
-										<a href="" target="_blank" class="btn-4 text-medium color-900 text-nowrap">
+										<a
+											href=""
+											target="_blank"
+											class="btn-4 text-medium color-900 text-nowrap">
 											See on GitHub
 											<div class="underlines">
 												<div class="default-underline"></div>
 												<div class="moving-underline"></div>
 											</div>
 										</a>
-										<a href="" target="_blank" class="btn-3 inline btn-2 text-medium color-800 text-nowrap">
+										<a
+											href=""
+											target="_blank"
+											class="btn-3 inline btn-2 text-medium color-800 text-nowrap">
 											Visit Site
 											<div class="arrow-wrapper">
-												<img class="arrow-2 primary" src="./images/	arrow-icon-1.svg" alt=""/>
-												<img class="arrow-2 secondary" src="./images/	arrow-icon-1.svg" alt=""/>
+												<img
+													class="arrow-2 primary"
+													src="./images/	arrow-icon-1.svg"
+													alt="" />
+												<img
+													class="arrow-2 secondary"
+													src="./images/	arrow-icon-1.svg"
+													alt="" />
 											</div>
 										</a>
 									</div>
-									
 								</div>
 							</div>
 						</div>
 						<div class="dotted-line"></div>
 					</template>
-
 				</section>
 
-				<section id="" class="container">
-    	    <h2 class="parallax-heading text-9xl padding-2">Problem Solution Problem Solution Problem Solution Problem Solution Problem Solution Problem Solution Problem Solution</h2>
-					<div class="spacer-3rem" style="display: flex; justify-content: flex-end; gap: 1rem; height: 50px;">
-						<span class="spacer-3rem">Always expanding</span>
-						<div class="dotted-border" style="margin: 0;"></div>
+				<section
+					id=""
+					class="container">
+					<h2 class="parallax-heading text-9xl padding-2">
+						Problem Solution Problem Solution Problem Solution Problem Solution Problem Solution Problem Solution
+						Problem Solution
+					</h2>
+					<div
+						class="spacer-3rem"
+						style="display: flex; justify-content: flex-end; gap: 1rem; height: 50px">
+						<span class="spacer-3rem">More Coming</span>
+						<div
+							class="dotted-border"
+							style="margin: 0"></div>
 					</div>
-    	  </section>
-
+				</section>
 			</main>
 
-			<footer id="contact" class="bg-dark color-white text-center container">
+			<footer
+				id="contact"
+				class="bg-dark color-white text-center container">
 				<div>
-					<span class="inline text-lg spacer-2rem">if ( wannaWorkWithMe == true ) &#123;</span>
-					<div class="text-8xl font-weight-600 spacer-2rem" style="font-size: clamp(4rem, 10vw, 8rem);">Let’s 	talk</div>
-					<a href="mailto: gianniruggieri99@gmail.com" class="btn text-lg bg-white color-900 font-weight-600 inline">Get in Touch</a>
+					<span class="inline text-lg spacer-2rem"
+						>if ( <span class="italic">wannaWorkWithMe == true</span> ) &#123;</span
+					>
+					<div
+						class="text-8xl font-weight-600 spacer-2rem"
+						style="font-size: clamp(4rem, 10vw, 8rem)">
+						Let’s talk
+					</div>
+					<a
+						href="mailto: gianniruggieri99@gmail.com"
+						class="btn text-lg bg-white color-900 font-weight-600 inline"
+						>Get in Touch</a
+					>
 				</div>
 
 				<div class="links">
 					<div class="footer-category">
 						<span class="menu-title text-base spacer-2rem inline">{ Navigation }</span>
 						<ul>
-							<li><a href="" class="btn-4 text-base text-nowrap inline color-white">
-								Home
-								<div class="underlines">
-									<div class="default-underline"></div>
-									<div class="moving-underline"></div>
-								</div>
-							</a></li>
-							<li><a href="#about-me" class="btn-4 text-base text-nowrap inline color-white">
-								About
-								<div class="underlines">
-									<div class="default-underline"></div>
-									<div class="moving-underline"></div>
-								</div>
-							</a></li>
-							<li><a href="#work" class="btn-4 text-base  text-nowrap inline color-white">
-								Work
-								<div class="underlines">
-									<div class="default-underline"></div>
-									<div class="moving-underline"></div>
-								</div>
-							</a></li>
-							<li><a href="mailto: gianniruggieri99@gmail.com" class="btn-4 text-base text-nowrap inline color-white">
-								Contact
-								<div class="underlines">
-									<div class="default-underline"></div>
-									<div class="moving-underline"></div>
-								</div>
-							</a></li>
+							<li>
+								<a
+									href=""
+									class="btn-4 text-base text-nowrap inline color-white">
+									Home
+									<div class="underlines">
+										<div class="default-underline"></div>
+										<div class="moving-underline"></div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a
+									href="#about-me"
+									class="btn-4 text-base text-nowrap inline color-white">
+									About
+									<div class="underlines">
+										<div class="default-underline"></div>
+										<div class="moving-underline"></div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a
+									href="#work"
+									class="btn-4 text-base text-nowrap inline color-white">
+									Work
+									<div class="underlines">
+										<div class="default-underline"></div>
+										<div class="moving-underline"></div>
+									</div>
+								</a>
+							</li>
 						</ul>
 					</div>
-	
+
 					<div class="footer-category">
-						<span class="menu-title text-base spacer-2rem inline">{ Socials }</span>
+						<span class="menu-title text-base spacer-2rem inline">{ Contacts }</span>
 						<ul>
-							<li><a href="https://twitter.com/GRdevelops" class="btn-4 text-base text-nowrap inline color-white">
-								Twitter
-								<div class="underlines">
-									<div class="default-underline"></div>
-									<div class="moving-underline"></div>
-								</div>
-							</a></li>
-							<li><a href="https://www.linkedin.com/in/giovanniru/" class="btn-4 text-base text-nowrap inline color-white">
-								LinkedIn
-								<div class="underlines">
-									<div class="default-underline"></div>
-									<div class="moving-underline"></div>
-								</div>
-							</a></li>
-							<li><a href="https://github.com/GRdevelops/" class="btn-4 text-base text-nowrap inline color-white">
-								GitHub
-								<div class="underlines">
-									<div class="default-underline"></div>
-									<div class="moving-underline"></div>
-								</div>
-							</a></li>
+							<li>
+								<a
+									href="mailto: gianniruggieri@outlook.com"
+									target="_blank"
+									class="btn-4 text-base text-nowrap inline color-white">
+									Email
+									<div class="underlines">
+										<div class="default-underline"></div>
+										<div class="moving-underline"></div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://twitter.com/GRdevelops"
+									target="_blank"
+									class="btn-4 text-base text-nowrap inline color-white">
+									Twitter
+									<div class="underlines">
+										<div class="default-underline"></div>
+										<div class="moving-underline"></div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://www.linkedin.com/in/giovanniru/"
+									target="_blank"
+									class="btn-4 text-base text-nowrap inline color-white">
+									LinkedIn
+									<div class="underlines">
+										<div class="default-underline"></div>
+										<div class="moving-underline"></div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://github.com/GRdevelops/"
+									target="_blank"
+									class="btn-4 text-base text-nowrap inline color-white">
+									GitHub
+									<div class="underlines">
+										<div class="default-underline"></div>
+										<div class="moving-underline"></div>
+									</div>
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
 
-
-				<span class="text-base" style="line-height: 1.5; margin: 0 2rem;">© Designed & Coded by <span style="font-style: italic;">Giovanni Ruggieri</span> - See the <a href="https://github.com/GRdevelops/Portfolio" target="_blank">source code</a> of this portfolio.</span>
+				<span
+					class="text-base"
+					style="line-height: 1.5; margin: 0 2rem"
+					>© Designed & Coded by me<span class="italic"></span> - See the
+					<a
+						href="https://github.com/GRdevelops/Portfolio"
+						target="_blank"
+						>source code</a
+					>
+					of this portfolio.</span
+				>
 			</footer>
 		</div>
 	</body>

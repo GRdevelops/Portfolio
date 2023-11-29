@@ -32,23 +32,23 @@ function loadWork() {
 			imageUrl: './images/projects/ai-workout-generator-cover.webp',
 			alt: '',
 			title: 'OpenAI Workout Generator',
-			subtitle: '- React state management, API calls & instructions, Server implementation & Auth0.',
+			subtitle: '- Web App featuring State management, OpenAI API integration, Serverless & Auth0.',
 			description:
-				'OpenAI Workout Generator is a web app that lets you create a bespoke workout based on your level, equipment and goals. The challenges were: managing state flow, connecting data across components, maintaining high modularity and uncontaminated logic (which I could see becoming increasingly important). The backend is supported by Vercel serverless functions. Authentication is managed by Auth0. I enjoyed keeping the code clean with Emotion and minimal comments. Overall, this project was a major learning experience.',
+				"OpenAI Workout Generator is a web app that lets you create a tailored workout based on your level, equipment and goals. The challenges were: <span style='font-weight: 600'>managing state</span> flow, <span style='font-weight: 600'>connecting data</span> across components, maintaining <span style='font-weight: 600'>high modularity</span> and uncontaminated logic. From a UI/UX standpoint, the workout section <span style='font-weight: 600'>dinamically displays data</span> based on the output — data is converted into an object, which then is used to populate UI elements incrementally. The backend is supported by Vercel <span style='font-weight: 600'>serverless</span> functions. <span style='font-weight: 600'>Authentication</span> is managed by Auth0. I enjoyed keeping the code clean with <span style='font-weight: 600'>Emotion</span> and minimal comments. Overall, this project was a major learning experience.",
 			firstSkill: 'React',
-			secondSkill: 'RESTful APIs',
+			secondSkill: 'OpenAI API',
 		},
 		{
 			link: 'https://www.primopianovieste.it/',
-			github: 'https://github.com/GRdevelops/Portfolio',
+			github: 'https://github.com/GRdevelops/Primo-Piano-Luxury-Accomodations',
 			imageUrl: './images/projects/primopiano-cover.webp',
 			alt: '',
-			title: 'PrimoPiano Luxury Accomodations',
+			title: 'PrimoPiano Luxury Accommodations',
 			subtitle: '- Rental business in Vieste, Italy.',
 			description:
-				'A refurbished website for an accomodation rental business in Vieste. I used an envato template and modified it, creating additional pages and sections. I also implemented a new booking engine for online reservations, making this a fully functional official website. This was my first coding project.',
-			firstSkill: 'CSS',
-			secondSkill: 'HTML',
+				"PrimoPiano Luxury Accommodations is an accommodation rental business in Vieste. They asked for my help to refurbish their website. Being my first serious project, I used an Envato template and modified it, creating tailored <span style='font-weight: 600'>additional pages</span> and sections. I then <span style='font-weight: 600'>integrated</span> their <span style='font-weight: 600'>booking engine</span> to keep online reservation functionality. It is a fully functional website. Some challenges encountered were: hosting, migration, metadata, 301 redirects and .htaccess, accessibility, performance optimization.",
+			firstSkill: 'Migration',
+			secondSkill: 'CSS',
 		},
 		{
 			link: 'https://grdevelops.github.io/Welcome-To-The-Blog/',
@@ -56,9 +56,9 @@ function loadWork() {
 			imageUrl: './images/projects/blog-cover.webp',
 			alt: '',
 			title: 'Welcome to the blog',
-			subtitle: '- Simple blog with javascript functionalities',
+			subtitle: '- A responsive blog homepage featuring JavaScript functionalities.',
 			description:
-				'A user-friendly blog with practical JavaScript features including a persistent pop-up that stays closed upon page reload and a handy article sorting functionality that categorizes posts based on your selection. This was my second coding project.',
+				"Welcome to the Blog was conceived as a straightforward yet robust blog homepage, marking my second coding project. I meticulously chose <span style='font-weight: 600'>descriptive names</span> for CSS classes and JavaScript functions to ensure code clarity and maintainability. In terms of layout, I made sure to keep an overall <span style='font-weight: 600'>consistent design</span> with flexbox/grids. A key feature was integrating Mailchimp for email collection. Utilizing <span style='font-weight: 600'>vanilla JavaScript</span>, I implemented a pop-up that stays closed if you reload the page and a sorting functionality that shows posts relative to the selected category.",
 			firstSkill: 'Javascript',
 			secondSkill: 'CSS',
 		},
@@ -67,49 +67,49 @@ function loadWork() {
 			github: 'https://github.com/GRdevelops/Quote-Machine',
 			imageUrl: './images/projects/quote-machine.png',
 			alt: '',
-			title: 'Quote machine',
+			title: 'InspirQuote',
 			subtitle: '- API connected quote generator using React',
 			description:
-				'A React-based quote generator that fetches and displays random quotes from an API, providing users with an interactive and inspirational experience. This was my third coding project.',
+				"InspirQuote is a <span style='font-weight: 600'>React-based</span> quote generator that dynamically fetches and displays a diverse range of quotes from an <span style='font-weight: 600'>external API</span>. Each new quote triggers a fresh change in the app's background and icon colors. Building this as my third coding project, I honed my foundational skills in React and API integration.",
 			firstSkill: 'React',
-			secondSkill: 'CSS',
+			secondSkill: 'RESTful APIs',
 		},
 	];
 
 	const contentContainer = document.getElementById('work');
 	const contentTemplate = document.getElementById('case-study').content;
-	
-	data.forEach((item) => {
-	    const clone = document.importNode(contentTemplate, true);
-			const visitButton = clone.querySelector('.btn-3');
-			const seeOnGitHub = clone.querySelector('.btn-4');	
-	    const imageWrapper = clone.querySelector('.image-wrapper');
-	    const contentImage = clone.querySelector('.content-image');
-	    const contentTitle = clone.querySelector('.content-title');
-	    const contentSubtitle = clone.querySelector('.content-subtitle');
-	    const contentDescription = clone.querySelector('.content-description');
-	    const firstSkillElements = clone.querySelectorAll('.first.skill');
-	    const secondSkillElements = clone.querySelectorAll('.second.skill');	
 
-			visitButton.href = item.link;
-			visitButton.title = item.link;
-			seeOnGitHub.href = item.github;
-			seeOnGitHub.title = item.github;	
-	    imageWrapper.href = item.link;
-			imageWrapper.title = item.link; 
-	    contentImage.src = item.imageUrl;
-	    contentImage.alt = item.title;
-	    contentTitle.textContent = item.title;
-	    contentSubtitle.textContent = item.subtitle;
-	    contentDescription.textContent = item.description;	
-	    firstSkillElements.forEach((element) => {
-	        element.textContent = item.firstSkill;
-	    });	
-	    secondSkillElements.forEach((element) => {
-	        element.textContent = item.secondSkill;
-	    });
-	    // Append the clone to the container
-	    contentContainer.appendChild(clone);
+	data.forEach(item => {
+		const clone = document.importNode(contentTemplate, true);
+		const visitButton = clone.querySelector('.btn-3');
+		const seeOnGitHub = clone.querySelector('.btn-4');
+		const imageWrapper = clone.querySelector('.image-wrapper');
+		const contentImage = clone.querySelector('.content-image');
+		const contentTitle = clone.querySelector('.content-title');
+		const contentSubtitle = clone.querySelector('.content-subtitle');
+		const contentDescription = clone.querySelector('.content-description');
+		const firstSkillElements = clone.querySelectorAll('.first.skill');
+		const secondSkillElements = clone.querySelectorAll('.second.skill');
+
+		visitButton.href = item.link;
+		visitButton.title = item.link;
+		seeOnGitHub.href = item.github;
+		seeOnGitHub.title = item.github;
+		imageWrapper.href = item.link;
+		imageWrapper.title = item.link;
+		contentImage.src = item.imageUrl;
+		contentImage.alt = item.title;
+		contentTitle.textContent = item.title;
+		contentSubtitle.innerHTML = item.subtitle;
+		contentDescription.innerHTML = item.description;
+		firstSkillElements.forEach(element => {
+			element.textContent = item.firstSkill;
+		});
+		secondSkillElements.forEach(element => {
+			element.textContent = item.secondSkill;
+		});
+		// Append the clone to the container
+		contentContainer.appendChild(clone);
 	});
 }
 
@@ -121,7 +121,7 @@ const triggerAnimation = () => {
 	const elements = document.querySelectorAll('.line, .wave-letters');
 	const windowHeight = window.innerHeight;
 
-	elements.forEach((element) => {
+	elements.forEach(element => {
 		const rect = element.getBoundingClientRect();
 
 		if (rect.top <= windowHeight * 0.9) {
@@ -144,7 +144,7 @@ const setTranslateX = () => {
 
 	const maxTranslateX = window.innerWidth;
 
-	headings.forEach((heading) => {
+	headings.forEach(heading => {
 		const translateXValue = -(maxTranslateX - maxTranslateX * scrollPercentage);
 		heading.style.transform = `translateX(${translateXValue}px)`;
 	});
@@ -247,30 +247,28 @@ const closeMenu = () => {
 };
 
 // Start closeMenu animation when clicking on menu options
-options.forEach((option) => {
-	option.querySelector('a').addEventListener('click', (event) => {
+options.forEach(option => {
+	option.querySelector('a').addEventListener('click', event => {
 		closeMenu();
 	});
 });
 
-menuOpenButton.forEach((element) => {
+menuOpenButton.forEach(element => {
 	element.addEventListener('click', openMenu);
 });
 menuCloseButton.addEventListener('click', closeMenu);
 
-
 // Text animation (Using SplitType library)
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 	const myText = new SplitType('.my-text', {
-			types: 'chars'
+		types: 'chars',
 	});
 
 	// Animate each character with GSAP
 	gsap.to(myText.chars, {
-			y: 0, 
-			stagger: 0.05, 
-			delay: 0.2, 
-			duration: 0.1 
+		y: 0,
+		stagger: 0.05,
+		delay: 0.2,
+		duration: 0.1,
 	});
 });
-
