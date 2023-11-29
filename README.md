@@ -1,14 +1,17 @@
-# Front-End Developer
+# PrimoPiano Luxury Accommodations
 
 ## Introduction
 Welcome to my personal front-end developer portfolio. This repository contains the source code for my portfolio website.
 
 This portfolio rapresents myself and my way of thinking. I like technically functional, light, performant and accessible interfaces with a time-less, minimal, yet visually pleasing look and an intuitive user experience. Typography, sound responsiveness, scalability, and attention to details in general. 
 
-Hopefully you like it, if not, I respect anybodies style and tastes. What's important to me, is that I can showcase my skills well and give as much essential information as possible to potential employers and clients that don't have much time to waste across millions of existing options.
+Hopefully you like it, if not, I respect anybodies' style and taste. What's important to me, is that I can showcase my skills well and give as much essential information to potential employers and clients that don't have much time to waste across millions of existing options.
 
 ## Deployment
-This portfolio is deployed at https://www.desengineers.co/.
+This website is live at https://www.primopianovieste.it/
+
+<img src="https://github.com/GRdevelops/Portfolio/assets/121963326/f342485e-87ed-4b7f-9bd2-b5026609ec1a" width="500">
+
 
 ## Features
 - Responsive design using media queries.
@@ -20,17 +23,18 @@ This portfolio is deployed at https://www.desengineers.co/.
 - Vite
 
 ## Project Structure
+- `dist`: Production build of the portfolio (generated via build scripts).
+- `public`: Public files.
 - `src`: Contains the source code for the portfolio.
   - `css`: Website styling.
   - `js`: Main Javascript code.
-- `public`: Public files.
-- `dist`: Production build of the portfolio (generated via build scripts).
+- `index.html`: The main HTML file that serves as the entry point for the website. It links together all the CSS and JavaScript files.
 - `README.md`: Documentation about the portfolio project.
+- `package.json`: File for managing the project's dependencies, scripts for tools like npm, and versioning information.
 
 ## Contact
-- **Name**: Giovanni Ruggieri
-- **Email**: gianniruggieri99@gmail.com
-- **LinkedIn**: https://www.linkedin.com/in/giovanniru/
+- **Email**: gianniruggieri@outlook.com
+- **Portfolio**: https://www.desengineers.co
 - **GitHub**: https://github.com/GRdevelops
 
 Feel free to have a chat with me. Thank you for visiting my portfolio!
