@@ -272,26 +272,23 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Dark Mode
+// Dark Mode + keep dark mode on reload
 const darkModeButton = document.getElementById('dark-mode');
 
 let debounceTimer;
 darkModeButton.addEventListener('click', () => {
-		clearTimeout(debounceTimer);
-		debounceTimer = setTimeout(() => {
-			document.body.classList.toggle('dark');
-		}, 100);
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+        document.body.classList.toggle('dark');
+        // Update preference on toggle
+        const isDarkMode = document.body.classList.contains('dark');
+        localStorage.setItem('darkMode', isDarkMode);
+    }, 100);
 });
 
-// // Check and apply user's preference on page load
-// document.addEventListener('DOMContentLoaded', () => {
-// 	if (localStorage.getItem('darkMode') === 'true') {
-// 			document.body.classList.add('dark');
-// 	}
-// });
-
-// // Update preference on toggle
-// darkModeButton.addEventListener('click', () => {
-// 	const isDarkMode = document.body.classList.toggle('dark');
-// 	localStorage.setItem('darkMode', isDarkMode);
-// });
+// Check and apply user's preference on page load
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('darkMode') === 'true') {
+        darkModeButton.click(); // Simulate a click if the stored preference is dark mode
+    }
+});
