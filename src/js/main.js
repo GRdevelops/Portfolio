@@ -55,11 +55,11 @@ function loadWork() {
 			github: 'https://github.com/GRdevelops/Welcome-To-The-Blog',
 			imageUrl: './images/projects/blog-cover.webp',
 			alt: '',
-			title: 'Welcome to the blog',
+			title: 'Welcome To The Blog',
 			subtitle: '- A responsive blog homepage featuring JavaScript functionalities.',
 			description:
 				"Welcome to the Blog was conceived as a straightforward yet robust blog homepage, marking my second coding project. I meticulously chose <span style='font-weight: 600'>descriptive names</span> for CSS classes and JavaScript functions to ensure code clarity and maintainability. In terms of layout, I made sure to keep an overall <span style='font-weight: 600'>consistent design</span> with flexbox/grids. A key feature was integrating Mailchimp for email collection. Utilizing <span style='font-weight: 600'>vanilla JavaScript</span>, I implemented a pop-up that stays closed if you reload the page and a sorting functionality that shows posts relative to the selected category.",
-			firstSkill: 'Javascript',
+			firstSkill: 'JavaScript',
 			secondSkill: 'CSS',
 		},
 		{
@@ -73,6 +73,18 @@ function loadWork() {
 				"InspirQuote is a <span style='font-weight: 600'>React-based</span> quote generator that dynamically fetches and displays a diverse range of quotes from an <span style='font-weight: 600'>external API</span>. Each new quote triggers a fresh change in the app's background and icon colors. Building this as my third coding project, I honed my foundational skills in React and API integration.",
 			firstSkill: 'React',
 			secondSkill: 'RESTful APIs',
+		},
+		{
+			link: 'https://simple-to-do-gamma.vercel.app/',
+			github: 'https://github.com/GRdevelops/to-do-list-with-vannilla-js',
+			imageUrl: './images/projects/my-quick-list-cover.webp',
+			alt: '',
+			title: 'My Quick List',
+			subtitle: '- A simple to-do app that remembers your tasks',
+			description:
+				"My Quick List is a simple to-do app, designed to be intuitive and easy to use. Enter your tasks and do not worry if you refresh or come back later because the browser is going to store your tasks. Nonetheless, I would not use it for something important. Built with Vite using: HTML, CSS and <span style='font-weight: 600'>Vanilla JavaScript</span>. Challenges: <span style='font-weight: 600'>localStorage</span>, <span style='font-weight: 600'>Dark Mode</span>.",
+			firstSkill: 'JavaScript',
+			secondSkill: 'Dark Mode',
 		},
 	];
 
