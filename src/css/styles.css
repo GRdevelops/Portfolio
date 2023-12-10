@@ -635,13 +635,9 @@ a:hover .item.two {
 
 .line {
 	height: 2px;
-	opacity: 0.7;
+	background-color: #777;
 	transform: translateX(-105%);
 	will-change: transform;
-}
-
-.line.animate {
-	animation: revealOnScroll 2s ease forwards;
 }
 
 @keyframes revealOnScroll {
@@ -1167,12 +1163,20 @@ body.dark .layer {
 
 /* Work */
 
-.parallax-heading {
+.marquee-container {
+	overflow: hidden;
+}
+
+.marquee-content {
+	display: flex;
 	font-weight: 600;
 	opacity: 0.9;
 	white-space: nowrap;
-	transform: translateX(-50%);
 	line-height: 1;
+}
+
+.marquee-content span {
+	flex-shrink: 0;
 }
 
 .content-wrapper {

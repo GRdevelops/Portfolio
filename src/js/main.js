@@ -34,7 +34,7 @@ function loadWork() {
 			title: 'OpenAI Workout Generator',
 			subtitle: '- Web App featuring State management, OpenAI API integration, Serverless & Auth0.',
 			description:
-				"OpenAI Workout Generator is a web app that lets you create a tailored workout based on your level, equipment and goals. The challenges were: <span style='font-weight: 600'>managing state</span> flow, <span style='font-weight: 600'>connecting data</span> across components, maintaining <span style='font-weight: 600'>high modularity</span> and uncontaminated logic. From a UI/UX standpoint, the workout section <span style='font-weight: 600'>dinamically displays data</span> based on the output — data is converted into an object, which then is used to populate UI elements incrementally. The backend is supported by Vercel <span style='font-weight: 600'>serverless</span> functions. <span style='font-weight: 600'>Authentication</span> is managed by Auth0. I enjoyed keeping the code clean with <span style='font-weight: 600'>Emotion</span> and minimal comments. Overall, this project was a major learning experience.",
+				"OpenAI Workout Generator is a web app that lets you create a tailored workout based on your level, equipment and goals. The challenges were: <span style='font-weight: 600'>managing state</span> flow, <span style='font-weight: 600'>connecting data</span> across components, maintaining <span style='font-weight: 600'>high modularity</span> and uncontaminated logic. From a UI/UX standpoint, the workout section <span style='font-weight: 600'>dinamically displays data</span> based on what's inside the api response — data is converted into an object, which is used to populate UI elements incrementally. The backend is supported by Vercel <span style='font-weight: 600'>serverless</span> functions. <span style='font-weight: 600'>Authentication</span> is managed by Auth0. I tried to keep the code clean and understandable with <span style='font-weight: 600'>Emotion</span> and minimal comments. Overall, this project was a major learning experience.",
 			firstSkill: 'React',
 			secondSkill: 'OpenAI API',
 		},
@@ -46,26 +46,26 @@ function loadWork() {
 			title: 'PrimoPiano Luxury Accommodations',
 			subtitle: '- Rental business in Vieste, Italy.',
 			description:
-				"PrimoPiano Luxury Accommodations is an accommodation rental business in Vieste. They asked for my help to refurbish their website. Being my first serious project, I used an Envato template and modified it, creating tailored <span style='font-weight: 600'>additional pages</span> and sections. I then <span style='font-weight: 600'>integrated</span> their <span style='font-weight: 600'>booking engine</span> to keep online reservation functionality. It is a fully functional website. Some challenges encountered were: hosting, migration, metadata, 301 redirects and .htaccess, accessibility, performance optimization.",
+				"PrimoPiano Luxury Accommodations is an accommodation rental business in Vieste. They asked for my help to refurbish their website. I used an Envato template and modified it, creating tailored <span style='font-weight: 600'>additional pages</span> and sections. I then <span style='font-weight: 600'>integrated</span> their <span style='font-weight: 600'>booking engine</span> to keep online reservation functionality. It is a fully functional website. Some challenges encountered were: hosting, migration, metadata, 301 redirects and .htaccess, accessibility, performance optimization.",
 			firstSkill: 'Migration',
 			secondSkill: 'CSS',
 		},
 		{
 			link: 'https://grdevelops.github.io/Welcome-To-The-Blog/',
 			github: 'https://github.com/GRdevelops/Welcome-To-The-Blog',
-			imageUrl: './images/projects/blog-cover.webp',
+			imageUrl: './images/projects/welcome-to-the-blog-cover.webp',
 			alt: '',
 			title: 'Welcome To The Blog',
 			subtitle: '- A responsive blog homepage featuring JavaScript functionalities.',
 			description:
-				"Welcome to the Blog was conceived as a straightforward yet robust blog homepage, marking my second coding project. I meticulously chose <span style='font-weight: 600'>descriptive names</span> for CSS classes and JavaScript functions to ensure code clarity and maintainability. In terms of layout, I made sure to keep an overall <span style='font-weight: 600'>consistent design</span> with flexbox/grids. A key feature was integrating Mailchimp for email collection. Utilizing <span style='font-weight: 600'>vanilla JavaScript</span>, I implemented a pop-up that stays closed if you reload the page and a sorting functionality that shows posts relative to the selected category.",
+				"Welcome to the Blog was conceived as a straightforward blog homepage, marking my second coding project. I took care in chosing <span style='font-weight: 600'>descriptive names</span>, both for CSS classes and JavaScript functions. In terms of layout, I made sure to keep an overall <span style='font-weight: 600'>consistent design</span> thank to the flexbox/grid responsive abilities. A practical feature is the integration of <span style='font-weight: 600'>Mailchimp</span> for email collection. Utilizing <span style='font-weight: 600'>vanilla JavaScript</span>, I implemented a pop-up that stays closed even if you reload the page and a sorting functionality that shows posts relative to the selected category.",
 			firstSkill: 'JavaScript',
 			secondSkill: 'CSS',
 		},
 		{
 			link: 'https://quote-generator-using-react.netlify.app/',
 			github: 'https://github.com/GRdevelops/Quote-Machine',
-			imageUrl: './images/projects/quote-machine.png',
+			imageUrl: './images/projects/quote-machine-cover.webp',
 			alt: '',
 			title: 'InspirQuote',
 			subtitle: '- API connected quote generator using React',
@@ -82,7 +82,7 @@ function loadWork() {
 			title: 'My Quick List',
 			subtitle: '- A simple to-do app that remembers your tasks',
 			description:
-				"My Quick List is a simple to-do app, designed to be intuitive and easy to use. Enter your tasks and do not worry if you refresh or come back later because the browser is going to store your tasks. Nonetheless, I would not use it for something important. Built with Vite using: HTML, CSS and <span style='font-weight: 600'>Vanilla JavaScript</span>. Challenges: <span style='font-weight: 600'>localStorage</span>, <span style='font-weight: 600'>Dark Mode</span>.",
+				"My Quick List is a simple to-do app, designed to be intuitive and easy to use. Enter your tasks and do not worry if you refresh or come back later, because the browser is going to store everything. Nonetheless, I would not use it for something important. Built with Vite using: HTML, CSS and <span style='font-weight: 600'>Vanilla JavaScript</span>. Challenges: <span style='font-weight: 600'>localStorage</span>, <span style='font-weight: 600'>Dark Mode</span>.",
 			firstSkill: 'JavaScript',
 			secondSkill: 'Dark Mode',
 		},
@@ -124,47 +124,57 @@ function loadWork() {
 		contentContainer.appendChild(clone);
 	});
 }
-
 document.addEventListener('DOMContentLoaded', loadWork);
 
 //Animate lines on scroll
+gsap.registerPlugin(ScrollTrigger);
 
-const triggerAnimation = () => {
-	const elements = document.querySelectorAll('.line, .wave-letters');
-	const windowHeight = window.innerHeight;
+document.querySelectorAll('.line-container').forEach(wrapper => {
+	gsap.to(wrapper.querySelectorAll('.line'), {
+		scrollTrigger: {
+			trigger: wrapper,
+			start: 'top 90%', // Animation starts when the top of wrapper is at 90% of the viewport height
+			toggleActions: 'play none none none',
+		},
 
-	elements.forEach(element => {
-		const rect = element.getBoundingClientRect();
-
-		if (rect.top <= windowHeight * 0.9) {
-			element.classList.add('animate');
-		}
+		x: 0,
+		y: 0,
+		duration: 3,
+		ease: 'power1.out',
 	});
-};
+});
 
-window.addEventListener('scroll', triggerAnimation);
+// Marquee effect
+document.querySelectorAll('.marquee-container').forEach(container => {
+	const marqueeChunk = container.querySelectorAll('.marquee-chunk');
+	const chunkWidth = marqueeChunk[0].offsetWidth;
+
+	gsap.to(marqueeChunk, {
+		x: -chunkWidth,
+		ease: 'linear',
+		duration: 6,
+		repeat: -1, // Infinite loop
+		modifiers: {
+			x: gsap.utils.unitize(x => parseFloat(x) % chunkWidth),
+		},
+	});
+});
 
 // Parallax effect
-
-const headings = document.querySelectorAll('.parallax-heading');
-
-const setTranslateX = () => {
-	const scrollValue = window.scrollY;
-	const maxScrollValue = document.body.scrollHeight - window.innerHeight;
-
-	const scrollPercentage = scrollValue / maxScrollValue;
-
-	const maxTranslateX = window.innerWidth;
-
-	headings.forEach(heading => {
-		const translateXValue = -(maxTranslateX - maxTranslateX * scrollPercentage);
-		heading.style.transform = `translateX(${translateXValue}px)`;
-	});
-};
-
-window.addEventListener('scroll', () => {
-	requestAnimationFrame(setTranslateX);
-});
+// const headings = document.querySelectorAll('.parallax-heading');
+// const setTranslateX = () => {
+// 	const scrollValue = window.scrollY;
+// 	const maxScrollValue = document.body.scrollHeight - window.innerHeight;
+// 	const scrollPercentage = scrollValue / maxScrollValue;
+// 	const maxTranslateX = window.innerWidth;
+// 	headings.forEach(heading => {
+// 		const translateXValue = -(maxTranslateX - maxTranslateX * scrollPercentage);
+// 		heading.style.transform = `translateX(${translateXValue}px)`;
+// 	});
+// };
+// window.addEventListener('scroll', () => {
+// 	requestAnimationFrame(setTranslateX);
+// });
 
 // Navmenu animation OPEN
 const menuOpenButton = document.querySelectorAll('.open-menu');
@@ -179,18 +189,12 @@ const openMenu = () => {
 
 	// Animate layers with Web Animations API
 	layers.forEach((layer, index) => {
-		layer.animate(
-			[
-				{ height: '0' },
-				{ height: '110vh' }, // Assuming full height is desired
-			],
-			{
-				duration: 700,
-				fill: 'forwards',
-				delay: index * 100,
-				easing: 'ease',
-			}
-		);
+		layer.animate([{ height: '0' }, { height: '110vh' }], {
+			duration: 700,
+			fill: 'forwards',
+			delay: index * 100,
+			easing: 'ease',
+		});
 	});
 
 	// Animate options with Web Animations API
@@ -270,9 +274,7 @@ menuCloseButton.addEventListener('click', closeMenu);
 
 // Text animation (Using SplitType library)
 document.addEventListener('DOMContentLoaded', function () {
-	const myText = new SplitType('.my-text', {
-		types: 'chars',
-	});
+	const myText = new SplitType('.my-text', { types: 'chars' });
 
 	// Animate each character with GSAP
 	gsap.to(myText.chars, {
@@ -283,24 +285,43 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
+// Paragraph Text Reveal
+const textToApplyRevealEffectOn = document.querySelectorAll('.reveal-type');
+
+textToApplyRevealEffectOn.forEach((char, i) => {
+	const text = new SplitType(char, { types: 'words' });
+
+	gsap.from(text.words, {
+		scrollTrigger: {
+			trigger: char,
+			start: 'top 90%',
+			// end: 'top 20%',
+			scrub: false,
+			markers: false,
+		},
+		opacity: 0.2,
+		stagger: 0.1,
+		duration: 0.2,
+	});
+});
 
 // Dark Mode + keep dark mode on reload
 const darkModeButton = document.getElementById('dark-mode');
 
 let debounceTimer;
 darkModeButton.addEventListener('click', () => {
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => {
-        document.body.classList.toggle('dark');
-        // Update preference on toggle
-        const isDarkMode = document.body.classList.contains('dark');
-        localStorage.setItem('darkMode', isDarkMode);
-    }, 100);
+	clearTimeout(debounceTimer);
+	debounceTimer = setTimeout(() => {
+		document.body.classList.toggle('dark');
+		// Update preference on toggle
+		const isDarkMode = document.body.classList.contains('dark');
+		localStorage.setItem('darkMode', isDarkMode);
+	}, 100);
 });
 
 // Check and apply user's preference on page load
 document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('darkMode') === 'true') {
-        darkModeButton.click(); // Simulate a click if the stored preference is dark mode
-    }
+	if (localStorage.getItem('darkMode') === 'true') {
+		darkModeButton.click(); // Simulate a click if the stored preference is dark mode
+	}
 });

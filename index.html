@@ -42,6 +42,7 @@
 			integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 		<script
 			defer
 			type="module"
@@ -242,13 +243,13 @@
 					<div
 						class="first-row padding-3"
 						style="justify-items: flex-end">
-						<p class="text-4xl font-weight-600 color-900">
-							My love for this field began 2 years ago when I started learning the basics of HTML, CSS, JavaScript and
-							UI/UX principles. Since then, I have been constantly learning and improving my skills to become a better
-							developer and a better person. Today, my goal is to help businesses reach their goals through clean code
-							and intuive design.
+						<p class="text-4xl font-weight-600 color-900 reveal-type">
+							When I was a kid, I used to get a thrill when looking at a good interface. Well.. I still do. That's why
+							2 years ago, I decided to begin my journey. Since then, I have been constantly learning and improving my
+							skills to become a better “UI creator”, particularly on the development side. Today, my goal is to help
+							businesses reach their goals through clean code and intuitive design.
 						</p>
-						<div class="v-l-wrapper flex justify-center">
+						<div class="line-container v-l-wrapper flex justify-center">
 							<div class="line vertical bg-dark"></div>
 						</div>
 						<span
@@ -257,7 +258,7 @@
 							>{ About me }</span
 						>
 					</div>
-					<div class="overflow-hidden"><div class="line bg-dark"></div></div>
+					<div class="line-container overflow-hidden"><div class="line"></div></div>
 				</section>
 
 				<!-- My Skills -->
@@ -277,8 +278,8 @@
 						</div>
 
 						<div class="content color-900">
-							<div class="v-l-wrapper">
-								<div class="line vertical bg-dark"></div>
+							<div class="line-container v-l-wrapper">
+								<div class="line vertical"></div>
 							</div>
 
 							<ul class="text-2xl font-weight-600">
@@ -302,18 +303,22 @@
 							</div>
 						</div>
 					</div>
-					<div class="overflow-hidden"><div class="line bg-dark"></div></div>
+					<div class="line-container overflow-hidden"><div class="line"></div></div>
 				</section>
 
 				<!-- Work -->
+				<div class="marquee-container">
+					<div class="marquee-content text-9xl padding-2">
+							<span class="marquee-chunk">Work Work Work&nbsp;</span>
+							<span class="marquee-chunk">Work Work Work&nbsp;</span>
+							<span class="marquee-chunk">Work Work Work&nbsp;</span>
+							<span class="marquee-chunk">Work Work Work&nbsp;</span>
+					</div>
+				</div>
+
 				<section
 					id="work"
 					class="container">
-					<h2
-						class="parallax-heading text-9xl padding-2"
-						data-speed="0.5">
-						Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work Work
-					</h2>
 
 					<template id="case-study">
 						<a
@@ -379,13 +384,18 @@
 					</template>
 				</section>
 
+				<div class="marquee-container">
+					<div class="marquee-content text-9xl padding-2">
+							<span class="marquee-chunk">Problem Solution&nbsp;</span>
+							<span class="marquee-chunk">Problem Solution&nbsp;</span>
+							<span class="marquee-chunk">Problem Solution&nbsp;</span>
+							<span class="marquee-chunk">Problem Solution&nbsp;</span>
+					</div>
+				</div>
+
 				<section
 					id=""
 					class="container">
-					<h2 class="parallax-heading text-9xl padding-2">
-						Problem Solution Problem Solution Problem Solution Problem Solution Problem Solution Problem Solution
-						Problem Solution
-					</h2>
 					<div
 						class="spacer-3rem"
 						style="display: flex; justify-content: flex-end; gap: 1rem; height: 50px">
@@ -476,10 +486,10 @@
 							</li>
 							<li>
 								<a
-									href="https://www.linkedin.com/in/giovanniru/"
+									href="https://github.com/GRdevelops/"
 									target="_blank"
 									class="btn-4 text-base text-nowrap inline color-white">
-									LinkedIn
+									GitHub
 									<div class="underlines">
 										<div class="default-underline"></div>
 										<div class="moving-underline"></div>
@@ -488,10 +498,10 @@
 							</li>
 							<li>
 								<a
-									href="https://github.com/GRdevelops/"
+									href="https://www.linkedin.com/in/giovanniru/"
 									target="_blank"
 									class="btn-4 text-base text-nowrap inline color-white">
-									GitHub
+									LinkedIn
 									<div class="underlines">
 										<div class="default-underline"></div>
 										<div class="moving-underline"></div>
