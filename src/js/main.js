@@ -32,9 +32,9 @@ function loadWork() {
 			imageUrl: './images/projects/ai-workout-generator-cover.webp',
 			alt: '',
 			title: 'OpenAI Workout Generator',
-			subtitle: '- Web App featuring State management, OpenAI API integration, Serverless & Auth0.',
+			subtitle: '- Web App featuring React, OpenAI API integration, Serverless & Auth0.',
 			description:
-				"OpenAI Workout Generator is a web app that lets you create a tailored workout based on your level, equipment and goals. The challenges were: <span style='font-weight: 600'>managing state</span> flow, <span style='font-weight: 600'>connecting data</span> across components, maintaining <span style='font-weight: 600'>high modularity</span> and uncontaminated logic. From a UI/UX standpoint, the workout section <span style='font-weight: 600'>dinamically displays data</span> based on what's inside the api response — data is converted into an object, which is used to populate UI elements incrementally. The backend is supported by Vercel <span style='font-weight: 600'>serverless</span> functions. <span style='font-weight: 600'>Authentication</span> is managed by Auth0. I tried to keep the code clean and understandable with <span style='font-weight: 600'>Emotion</span> and minimal comments. Overall, this project was a major learning experience.",
+				"OpenAI Workout Generator is a web app that lets you create a <span style='font-weight: 600'>tailored workout</span> based on your level, equipment and goals. Whether you need to plan your next gym program or a quick home workout on the fly, this app will tell you which exercises to do (sets, reps and rest included). The backend is supported by Vercel <span style='font-weight: 600'>serverless</span> functions. <span style='font-weight: 600'>Authentication</span> is managed by Auth0. I tried to keep the code clean and understandable with <span style='font-weight: 600'>Emotion</span> and descriptive comments.",
 			firstSkill: 'React',
 			secondSkill: 'OpenAI API',
 		},
@@ -46,7 +46,7 @@ function loadWork() {
 			title: 'PrimoPiano Luxury Accommodations',
 			subtitle: '- Rental business in Vieste, Italy.',
 			description:
-				"PrimoPiano Luxury Accommodations is an accommodation rental business in Vieste. They asked for my help to refurbish their website. I used an Envato template and modified it, creating tailored <span style='font-weight: 600'>additional pages</span> and sections. I then <span style='font-weight: 600'>integrated</span> their <span style='font-weight: 600'>booking engine</span> to keep online reservation functionality. It is a fully functional website. Some challenges encountered were: hosting, migration, metadata, 301 redirects and .htaccess, accessibility, performance optimization.",
+				"PrimoPiano Luxury Accommodations is an accommodation rental business in Vieste. I picked a code base template and improved it, creating tailored <span style='font-weight: 600'>additional pages</span> and sections. I then <span style='font-weight: 600'>integrated</span> their <span style='font-weight: 600'>booking engine</span> on the website to allow users to book a room or check availability. I also took care of: hosting, migration, metadata and 301 redirects to preserve google rankings.",
 			firstSkill: 'Migration',
 			secondSkill: 'CSS',
 		},
@@ -58,7 +58,7 @@ function loadWork() {
 			title: 'Welcome To The Blog',
 			subtitle: '- A responsive blog homepage featuring JavaScript functionalities.',
 			description:
-				"Welcome to the Blog was conceived as a straightforward blog homepage, marking my second coding project. I took care in chosing <span style='font-weight: 600'>descriptive names</span>, both for CSS classes and JavaScript functions. In terms of layout, I made sure to keep an overall <span style='font-weight: 600'>consistent design</span> thank to the flexbox/grid responsive abilities. A practical feature is the integration of <span style='font-weight: 600'>Mailchimp</span> for email collection. Utilizing <span style='font-weight: 600'>vanilla JavaScript</span>, I implemented a pop-up that stays closed even if you reload the page and a sorting functionality that shows posts relative to the selected category.",
+				"Welcome to the Blog is a straightforward blog homepage. The design is <span style='font-weight: 600'>responsive</span> and the images are optimized. I used <span style='font-weight: 600'>Mailchimp</span> to collect emails in the form. I used some <span style='font-weight: 600'>JavaScript</span> to allow sorting articles by category. During develpment I always try to use <span style='font-weight: 600'>descriptive names</span>, both for CSS classes and JavaScript functions.",
 			firstSkill: 'JavaScript',
 			secondSkill: 'CSS',
 		},
@@ -70,21 +70,21 @@ function loadWork() {
 			title: 'InspirQuote',
 			subtitle: '- API connected quote generator using React',
 			description:
-				"InspirQuote is a <span style='font-weight: 600'>React-based</span> quote generator that dynamically fetches and displays a diverse range of quotes from an <span style='font-weight: 600'>external API</span>. Each new quote triggers a fresh change in the app's background and icon colors. Building this as my third coding project, I honed my foundational skills in React and API integration.",
+				"InspirQuote is a <span style='font-weight: 600'>React-based</span> quote generator that dynamically fetches and displays a diverse range of quotes from an <span style='font-weight: 600'>external API</span>. Each new quote triggers a fresh change in the app's background and icon colors.",
 			firstSkill: 'React',
 			secondSkill: 'RESTful APIs',
 		},
 		{
-			link: 'https://simple-to-do-gamma.vercel.app/',
+			link: 'https://myquicklist.vercel.app/',
 			github: 'https://github.com/GRdevelops/to-do-list-with-vannilla-js',
 			imageUrl: './images/projects/my-quick-list-cover.webp',
 			alt: '',
 			title: 'My Quick List',
 			subtitle: '- A simple to-do app that remembers your tasks',
 			description:
-				"My Quick List is a simple to-do app, designed to be intuitive and easy to use. Enter your tasks and do not worry if you refresh or come back later, because the browser is going to store everything. Nonetheless, I would not use it for something important. Built with Vite using: HTML, CSS and <span style='font-weight: 600'>Vanilla JavaScript</span>. Challenges: <span style='font-weight: 600'>localStorage</span>, <span style='font-weight: 600'>Dark Mode</span>.",
+				"My Quick List is a simple to-do app, designed to be intuitive and easy to use. It's a complete full-stack application with a <span style='font-weight: 600'>Database</span> (MongoDB), a <span style='font-weight: 600'>backend</span> (Java), and a frontend using <span style='font-weight: 600'>vanilla HTML, CSS and JavaScript</span> (with Vite as the build tool). Additional features: <span style='font-weight: 600'>dark mode</span>, <span style='font-weight: 600'>responsiveness</span> and <span style='font-weight: 600'>environment variables</span>.",
 			firstSkill: 'JavaScript',
-			secondSkill: 'Dark Mode',
+			secondSkill: 'Backend',
 		},
 	];
 
@@ -294,14 +294,14 @@ textToApplyRevealEffectOn.forEach((char, i) => {
 	gsap.from(text.words, {
 		scrollTrigger: {
 			trigger: char,
-			start: 'top 90%',
+			start: 'top 80%',
 			// end: 'top 20%',
 			scrub: false,
 			markers: false,
 		},
 		opacity: 0.2,
-		stagger: 0.1,
-		duration: 0.2,
+		stagger: 0.07,
+		duration: 0.15,
 	});
 });
 

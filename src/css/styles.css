@@ -140,6 +140,11 @@ h1 {
 	font-size: clamp(2rem, 2.25vw, 2.25rem);
 }
 
+.text-hero {
+	/* 44px */
+	font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
 .text-4xl {
 	/* 40px to 48px */
 	font-size: clamp(1.5rem, 3.5vw, 3.5rem);
@@ -430,9 +435,10 @@ a:hover .item.two {
 }
 
 .profile-picture {
+	-webkit-border-radius: 1rem;
+	border-radius: 1rem;
 	height: 60dvw;
 	max-height: 600px;
-	border-radius: 1rem;
 	overflow: hidden;
 	display: flex;
 	align-items: center;
@@ -1074,6 +1080,8 @@ body.dark .layer {
 .second-row ul > li {
 	display: flex;
 	align-items: flex-start;
+	flex-wrap: wrap;
+	row-gap: 8px;
 }
 
 .second-row ul > li > span {
@@ -1105,8 +1113,7 @@ body.dark .layer {
 	display: flex;
 	flex-grow: 1;
 	align-self: stretch;
-	margin-left: 1rem;
-	margin-right: 1rem;
+	margin: 0 .3rem;
 }
 
 .square-wrapper {
@@ -1116,9 +1123,16 @@ body.dark .layer {
 }
 
 #square {
-	width: 75px;
-	height: 75px;
+	width: 90px;
+	height: 90px;
 	/* background-color: black; */
+}
+
+@media only screen and (max-width: 1024px) {
+	#square {
+		width: 70px;
+		height: 70px;
+	}
 }
 
 @media only screen and (max-width: 768px) {
@@ -1160,6 +1174,13 @@ body.dark .layer {
 		transform: rotate(-360deg);
 	}
 }
+
+@media only screen and (max-width: 390px) {
+	.sm-smaller {
+		font-size: 12px !important;
+	}
+}
+
 
 /* Work */
 
@@ -1333,7 +1354,7 @@ body.dark .layer {
 	opacity: 0.9;
 	align-self: stretch;
 	width: 1px;
-	background: radial-gradient(circle, black 35%, transparent 30%);
+	background: radial-gradient(circle, var(--text-900) 35%, transparent 30%);
 	background-size: 1px 15px;
 	background-repeat: repeat-y;
 	position: relative;
@@ -1348,7 +1369,7 @@ body.dark .layer {
 	left: -4px;
 	width: 10px;
 	height: 10px;
-	background-color: black;
+	background-color: var(--text-900);
 	border-radius: 50%;
 }
 
