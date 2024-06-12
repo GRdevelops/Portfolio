@@ -1014,6 +1014,13 @@ body.dark .layer {
 
 .about-me-question {
 	margin-bottom: 1rem;
+	font-size: 2.2rem;
+}
+
+.about-me-paragraph {
+	margin-bottom: 2rem;
+	font-size: 2rem;
+	font-weight: 300;
 }
 
 .v-l-wrapper {
@@ -1033,15 +1040,33 @@ body.dark .layer {
 	column-gap: 4rem;
 }
 
-#about-me p {
+.about-me-paragraph {
 	line-height: 1.2;
-	margin-bottom: 3rem;
 }
 
 @media only screen and (max-width: 768px) {
-	#about-me p {
-		line-height: 1.4;
+	.about-me-question {
+		margin-bottom: 0.5rem;
+		font-size: 1.7rem;
+	}
+
+	.about-me-paragraph {
+		line-height: 1.3;
+		font-size: 1.5rem;
 		margin-bottom: 2rem;
+	}
+}
+
+@media only screen and (max-width: 460px) {
+	.about-me-question {
+		margin-bottom: 0.5rem;
+		font-size: 1.3rem;
+	}
+
+	.about-me-paragraph {
+		line-height: 1.3;
+		font-size: 1.2rem;
+		margin-bottom: 1.5rem;
 	}
 }
 
