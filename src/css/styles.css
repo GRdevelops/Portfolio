@@ -1012,6 +1012,10 @@ body.dark .layer {
 
 /* About me */
 
+.about-me-question {
+	margin-bottom: 1rem;
+}
+
 .v-l-wrapper {
 	min-width: 2px;
 	overflow: hidden;
@@ -1031,11 +1035,13 @@ body.dark .layer {
 
 #about-me p {
 	line-height: 1.2;
+	margin-bottom: 3rem;
 }
 
 @media only screen and (max-width: 768px) {
 	#about-me p {
 		line-height: 1.4;
+		margin-bottom: 2rem;
 	}
 }
 
