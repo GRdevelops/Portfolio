@@ -27,12 +27,22 @@ startAnimationCycle();
 function loadWork() {
 	const data = [
 		{
+			link: 'https://app.reai.it/',
+			imageUrl: '/public/images/projects/reai-banner.webp',
+			alt: 'REAI',
+			title: 'REAI',
+			subtitle: "AI-powered full-stack app that streamlines document review for real estate agents, saving time and enhancing efficiency.",
+			description: "REAI is an <span style='font-weight: 600'>AI-powered tool</span> designed to streamline document review for real estate professionals. It uses advanced AI models to <span style='font-weight: 600'>extract and analyze</span> information from property documents with high precision. REAI maintains context across uploaded files, ensuring no details are missed. The tool offers <span style='font-weight: 600'>automatic analysis</span> and interactive chat features, allowing users to query document specifics effortlessly. With its focus on accuracy and efficiency, REAI significantly <span style='font-weight: 600'>reduces time and errors</span> in property document processing, making it an invaluable asset for both junior and senior real estate agents.",
+			firstSkill: 'AI Engineering',
+			secondSkill: 'Next.js',
+		},
+		{
 			link: 'https://open-ai-workout-generator.vercel.app/',
 			github: 'https://github.com/GRdevelops/openAI-Workout-Generator',
-			imageUrl: './images/projects/ai-workout-generator-cover.webp',
+			imageUrl: '/public/images/projects/ai-workout-generator-cover.webp',
 			alt: '',
 			title: 'OpenAI Workout Generator',
-			subtitle: '- Web App featuring React, OpenAI API integration, Serverless & Auth0.',
+			subtitle: 'Web App featuring React, OpenAI API integration, Serverless & Auth0.',
 			description:
 				"OpenAI Workout Generator is a web app that lets you create a <span style='font-weight: 600'>tailored workout</span> based on your level, equipment and goals. Whether you need to plan your next gym program or a quick home workout on the fly, this app will tell you which exercises to do (sets, reps and rest included). The backend is supported by Vercel <span style='font-weight: 600'>serverless</span> functions. <span style='font-weight: 600'>Authentication</span> is managed by Auth0. I tried to keep the code clean and understandable with <span style='font-weight: 600'>Emotion</span> and descriptive comments.",
 			firstSkill: 'React',
@@ -41,10 +51,10 @@ function loadWork() {
 		{
 			link: 'https://www.primopianovieste.it/',
 			github: 'https://github.com/GRdevelops/Primo-Piano-Luxury-Accomodations',
-			imageUrl: './images/projects/primopiano-cover.webp',
+			imageUrl: '/public/images/projects/primopiano-cover.webp',
 			alt: '',
 			title: 'PrimoPiano Luxury Accommodations',
-			subtitle: '- Rental business in Vieste, Italy.',
+			subtitle: 'Rental business in Vieste, Italy.',
 			description:
 				"PrimoPiano Luxury Accommodations is an accommodation rental business in Vieste. I picked a code base template and improved it, creating tailored <span style='font-weight: 600'>additional pages</span> and sections. I then <span style='font-weight: 600'>integrated</span> their <span style='font-weight: 600'>booking engine</span> on the website to allow users to book a room or check availability. I also took care of: hosting, migration, metadata and 301 redirects to preserve google rankings.",
 			firstSkill: 'Migration',
@@ -53,10 +63,10 @@ function loadWork() {
 		{
 			link: 'https://grdevelops.github.io/Welcome-To-The-Blog/',
 			github: 'https://github.com/GRdevelops/Welcome-To-The-Blog',
-			imageUrl: './images/projects/welcome-to-the-blog-cover.webp',
+			imageUrl: '/public/images/projects/welcome-to-the-blog-cover.webp',
 			alt: '',
 			title: 'Welcome To The Blog',
-			subtitle: '- A responsive blog homepage featuring JavaScript functionalities.',
+			subtitle: 'A responsive blog homepage featuring JavaScript functionalities.',
 			description:
 				"Welcome to the Blog is a straightforward blog homepage. The design is <span style='font-weight: 600'>responsive</span> and the images are optimized. I used <span style='font-weight: 600'>Mailchimp</span> to collect emails in the form. I used some <span style='font-weight: 600'>JavaScript</span> to allow sorting articles by category. During develpment I always try to use <span style='font-weight: 600'>descriptive names</span>, both for CSS classes and JavaScript functions.",
 			firstSkill: 'JavaScript',
@@ -65,10 +75,10 @@ function loadWork() {
 		{
 			link: 'https://quote-generator-using-react.netlify.app/',
 			github: 'https://github.com/GRdevelops/Quote-Machine',
-			imageUrl: './images/projects/quote-machine-cover.webp',
+			imageUrl: '/public/images/projects/quote-machine-cover.webp',
 			alt: '',
 			title: 'InspirQuote',
-			subtitle: '- API connected quote generator using React',
+			subtitle: 'API connected quote generator using React',
 			description:
 				"InspirQuote is a <span style='font-weight: 600'>React-based</span> quote generator that dynamically fetches and displays a diverse range of quotes from an <span style='font-weight: 600'>external API</span>. Each new quote triggers a fresh change in the app's background and icon colors.",
 			firstSkill: 'React',
@@ -77,10 +87,10 @@ function loadWork() {
 		{
 			link: 'https://myquicklist.vercel.app/',
 			github: 'https://github.com/GRdevelops/to-do-list-with-vannilla-js',
-			imageUrl: './images/projects/my-quick-list-cover.webp',
+			imageUrl: '/public/images/projects/my-quick-list-cover.webp',
 			alt: '',
 			title: 'My Quick List',
-			subtitle: '- A simple to-do app that remembers your tasks',
+			subtitle: 'A simple to-do app that remembers your tasks',
 			description:
 				"My Quick List is a simple to-do app, designed to be intuitive and easy to use. It's a complete full-stack application with a <span style='font-weight: 600'>Database</span> (MongoDB), a <span style='font-weight: 600'>backend</span> (Java), and a frontend using <span style='font-weight: 600'>vanilla HTML, CSS and JavaScript</span> (with Vite as the build tool). Additional features: <span style='font-weight: 600'>dark mode</span>, <span style='font-weight: 600'>responsiveness</span> and <span style='font-weight: 600'>environment variables</span>.",
 			firstSkill: 'JavaScript',
@@ -105,8 +115,12 @@ function loadWork() {
 
 		visitButton.href = item.link;
 		visitButton.title = item.link;
-		seeOnGitHub.href = item.github;
-		seeOnGitHub.title = item.github;
+		if (item.github) {
+			seeOnGitHub.href = item.github;
+			seeOnGitHub.title = item.github;
+		} else {
+			seeOnGitHub.style.display = 'none';
+		}
 		imageWrapper.href = item.link;
 		imageWrapper.title = item.link;
 		contentImage.src = item.imageUrl;

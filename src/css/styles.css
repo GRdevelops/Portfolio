@@ -1247,6 +1247,7 @@ body.dark .layer {
 
 .content-subtitle {
 	line-height: 1.4;
+	opacity: 0.9;
 }
 
 .content-description {
