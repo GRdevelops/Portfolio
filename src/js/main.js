@@ -28,7 +28,7 @@ function loadWork() {
 	const data = [
 		{
 			link: 'https://app.reai.it/',
-			imageUrl: '/public/images/projects/reai-banner.webp',
+			imageUrl: '/images/projects/reai-banner.webp',
 			alt: 'REAI',
 			title: 'REAI',
 			subtitle: "AI-powered full-stack app that streamlines document review for real estate agents, saving time and enhancing efficiency.",
@@ -39,7 +39,7 @@ function loadWork() {
 		{
 			link: 'https://open-ai-workout-generator.vercel.app/',
 			github: 'https://github.com/GRdevelops/openAI-Workout-Generator',
-			imageUrl: '/public/images/projects/ai-workout-generator-cover.webp',
+			imageUrl: '/images/projects/ai-workout-generator-cover.webp',
 			alt: '',
 			title: 'OpenAI Workout Generator',
 			subtitle: 'Web App featuring React, OpenAI API integration, Serverless & Auth0.',
@@ -51,7 +51,7 @@ function loadWork() {
 		{
 			link: 'https://www.primopianovieste.it/',
 			github: 'https://github.com/GRdevelops/Primo-Piano-Luxury-Accomodations',
-			imageUrl: '/public/images/projects/primopiano-cover.webp',
+			imageUrl: '/images/projects/primopiano-cover.webp',
 			alt: '',
 			title: 'PrimoPiano Luxury Accommodations',
 			subtitle: 'Rental business in Vieste, Italy.',
@@ -63,7 +63,7 @@ function loadWork() {
 		{
 			link: 'https://grdevelops.github.io/Welcome-To-The-Blog/',
 			github: 'https://github.com/GRdevelops/Welcome-To-The-Blog',
-			imageUrl: '/public/images/projects/welcome-to-the-blog-cover.webp',
+			imageUrl: '/images/projects/welcome-to-the-blog-cover.webp',
 			alt: '',
 			title: 'Welcome To The Blog',
 			subtitle: 'A responsive blog homepage featuring JavaScript functionalities.',
@@ -75,7 +75,7 @@ function loadWork() {
 		{
 			link: 'https://quote-generator-using-react.netlify.app/',
 			github: 'https://github.com/GRdevelops/Quote-Machine',
-			imageUrl: '/public/images/projects/quote-machine-cover.webp',
+			imageUrl: '/images/projects/quote-machine-cover.webp',
 			alt: '',
 			title: 'InspirQuote',
 			subtitle: 'API connected quote generator using React',
@@ -87,7 +87,7 @@ function loadWork() {
 		{
 			link: 'https://myquicklist.vercel.app/',
 			github: 'https://github.com/GRdevelops/to-do-list-with-vannilla-js',
-			imageUrl: '/public/images/projects/my-quick-list-cover.webp',
+			imageUrl: '/images/projects/my-quick-list-cover.webp',
 			alt: '',
 			title: 'My Quick List',
 			subtitle: 'A simple to-do app that remembers your tasks',
